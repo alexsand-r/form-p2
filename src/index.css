@@ -1,0 +1,28 @@
+@import "tailwindcss";
+
+
+:focus,
+:active {
+    outline: none;
+}
+
+
+body {
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    /* font-family: 'Roboto', sans-serif; */
+    padding: 25px 0;
+    color: black;
+    font-family: "Times New Roman", Times, serif;
+}
+
+#root {
+    width: 100%;
+    max-width: 824px;
+    padding: 0 15px;
+    /* background-color: aqua; */
+
+}
+
+
