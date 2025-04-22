@@ -1,50 +1,75 @@
 //--education
 
+import { useSelector } from "react-redux";
+
 export const Education = () => {
+  const { employeeArr } = useSelector((state) => state.employee);
+  console.log("вывожу в тайтле", employeeArr);
+
+  const lastEmployee = employeeArr[employeeArr.length - 1] || {}; // чтобы не было ошибки если массив пуст
   return (
     <>
-      <div className="px-2 bg-gray-50 text-sm grid grid-cols-[55%_30%_15%] pt-2">
-        <div className="font-bold text-center bg-white py-0.5 border-b border-r border-t border-l border-gray-700">
-          Назва освітнього закладу
+      <div>
+        <div className="px-2 bg-gray-100 text-sm grid grid-cols-[55%_30%_15%] pt-2 mb-0.5">
+          <div className="font-bold text-center bg-white py-0.5 border-b border-r border-t border-l border-gray-700">
+            Назва освітнього закладу
+          </div>
+          <div className="font-bold text-center bg-white py-0.5 border-b border-r border-t border-gray-700">
+            Диплом (свідоцтво), серія, номер
+          </div>
+          <div className="font-bold text-center bg-white py-0.5 border-b border-r border-t border-gray-700">
+            Рік закінчення
+          </div>
         </div>
-        <div className="font-bold text-center bg-white py-0.5 border-b border-r border-t border-gray-700">
-          Диплом (свідоцтво), серія, номер
-        </div>
-        <div className="font-bold text-center bg-white py-0.5 border-b border-r border-t border-gray-700">
-          Рік закінчення
-        </div>
-        {/* строка */}
-        <div className="pl-2 bg-white py-0.5 border-b border-r border-l border-gray-700">
-          Луганський машинститут
-        </div>
-        <div className="pl-2 text-center bg-white py-0.5 border-b border-r border-gray-700">
-          ЕН 451256
-        </div>
-        <div className="text-center bg-white py-0.5 border-b border-r border-gray-700">
-          1985
-        </div>
+        {/* тут мапить наверное */}
+        {Array.isArray(lastEmployee.educationalInstitutions) &&
+          lastEmployee.educationalInstitutions.map((edu, index) => (
+            <div
+              key={index}
+              className="px-2 bg-gray-100 grid grid-cols-[55%_30%_15%] gap-y-0.5 mb-0.5"
+            >
+              <div className="pl-2 text-center bg-white py-0.5 border-b border-r border-t border-l border-gray-700">
+                {edu.name}
+              </div>
+              <div className="pl-2 text-center bg-white py-0.5 border-b border-r border-t border-gray-700">
+                {edu.documentNumber}
+              </div>
+              <div className="pl-2 text-center bg-white py-0.5 border-b border-r border-t border-gray-700">
+                {edu.graduationYear}
+              </div>
+            </div>
+          ))}
       </div>
-      {/* профессия квалификация диплом */}
-      <div className="px-2 bg-gray-50 text-sm grid grid-cols-[55%_30%_15%]">
-        <div className="flex justify-center  items-center font-bold text-center bg-white py-0.5 border-b border-r border-l border-gray-700">
-          Спеціальність (професія) за дипломом (свідоцтвом)
+
+      <div>
+        <div className="px-2 bg-gray-100 text-sm grid grid-cols-[55%_30%_15%] pt-2 mb-0.5">
+          <div className="font-bold text-center bg-white py-0.5 border-b border-r border-t border-l border-gray-700">
+            Спеціальність (професія) за дипломом (свідоцтвом)
+          </div>
+          <div className="font-bold text-center bg-white py-0.5 border-b border-r border-t border-gray-700">
+            Кваліфікація за дипломом (свідоцтвом)
+          </div>
+          <div className="font-bold text-center bg-white py-0.5 border-b border-r border-t border-gray-700">
+            Форма навчання (денна, вечірня, заочна)
+          </div>
         </div>
-        <div className="flex items-center justify-center font-bold text-center bg-white py-0.5 border-b border-r border-gray-700">
-          Кваліфікація за дипломом (свідоцтвом)
-        </div>
-        <div className="flex items-center font-bold text-center bg-white py-0.5 border-b border-r border-gray-700">
-          Форма навчання (денна, вечірня, заочна)
-        </div>
-        {/* строка */}
-        <div className="pl-2 bg-white py-0.5 border-b border-r border-l border-gray-700">
-          Бухгалтер
-        </div>
-        <div className="pl-2 text-center bg-white py-0.5 border-b border-r border-gray-700">
-          магистр
-        </div>
-        <div className="text-center bg-white py-0.5 border-b border-r border-gray-700">
-          денна
-        </div>
+        {Array.isArray(lastEmployee.profession) &&
+          lastEmployee.profession.map((prof, index) => (
+            <div
+              key={index}
+              className="px-2 bg-gray-100 grid grid-cols-[55%_30%_15%] gap-y-0.5 mb-0.5"
+            >
+              <div className="pl-2 text-center bg-white py-0.5 border-b border-r border-t border-l border-gray-700">
+                {prof.name}
+              </div>
+              <div className="pl-2 text-center bg-white py-0.5 border-b border-r border-t border-gray-700">
+                {prof.documentNumber}
+              </div>
+              <div className="pl-2 text-center bg-white py-0.5 border-b border-r border-t border-gray-700">
+                {prof.graduationYear}
+              </div>
+            </div>
+          ))}
       </div>
     </>
   );

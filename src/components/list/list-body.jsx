@@ -1,10 +1,18 @@
 //-- list-body
+import { useSelector } from "react-redux";
 
 export const ListBody = () => {
+  const { employeeArr } = useSelector((state) => state.employee);
   return (
     <>
-      <div className="px-2 bg-gray-50 text-sm py-2 mb-4 shadow-md">
-        <div className="text-sm grid grid-cols-[10%_1fr_15%_15%_15%]">
+      <div className="flex justify-between mb-5">
+        <h2>ОСОБОВА КАРТКА ПРАЦІВНИКА</h2>
+        <h2>Типова форма N П-2</h2>
+      </div>
+
+      {/* header table */}
+      <div className="px-2 bg-gray-100 text-sm py-2 mb-4 shadow-md">
+        <div className="text-sm grid grid-cols-[6%_1fr_15%_15%_15%]">
           <div className="font-bold text-center bg-white py-0.5 border-b border-r border-t border-l border-gray-700">
             №
           </div>
@@ -12,104 +20,54 @@ export const ListBody = () => {
             П.І.Б.
           </div>
           <div className="font-bold text-center bg-white py-0.5 border-b border-r border-t border-gray-700">
+            Іден код
+          </div>
+          <div className="font-bold text-center bg-white py-0.5 border-b border-r border-t border-gray-700">
             переглянути
           </div>
           <div className="font-bold text-center bg-white py-0.5 border-b border-r border-t border-gray-700">
             редагувати
           </div>
-          <div className="font-bold text-center bg-white py-0.5 border-b border-r border-t border-gray-700">
-            статус
-          </div>
         </div>
       </div>
-      <div className="px-2 bg-gray-50 text-sm py-2 shadow-md flex flex-col gap-0.5">
-        <div className="text-sm grid grid-cols-[10%_1fr_15%_15%_15%]">
-          <div className="font-bold text-center bg-white py-0.5 border-b border-r border-t border-l border-gray-700">
-            <span>1</span>
+      {/* body table */}
+      <div className="px-2 bg-gray-100 text-sm py-2 shadow-md flex flex-col gap-0.5 mb-4">
+        {/* element  */}
+        {employeeArr.map((el, index) => (
+          <div
+            key={el.id}
+            className="text-sm grid grid-cols-[6%_1fr_15%_15%_15%]"
+          >
+            <div className="font-bold text-center bg-white py-0.5 border-b border-r border-t border-l border-gray-700">
+              <span>{index + 1}</span>
+            </div>
+            <div className="capitalize flex gap-3 pl-2 font-bold text-center bg-white py-0.5 border-b border-r border-t border-gray-700">
+              <span>{el.name}</span>
+              <span>{el.firstName}</span>
+              <span>{el.lastName}</span>
+            </div>
+            <div className="font-bold text-center bg-white py-0.5 border-b border-r border-t border-gray-700">
+              {/* 2545125698 */}
+              {el.individualIdentificationNumber}
+            </div>
+            <div className="font-bold text-center bg-white py-0.5 border-b border-r border-t border-gray-700">
+              <button
+                type="button"
+                className="cursor-pointer bg-green-500 px-1 text-white hover:bg-green-600 transition-bg duration-300"
+              >
+                переглянути
+              </button>
+            </div>
+            <div className="font-bold text-center bg-white py-0.5 border-b border-r border-t border-gray-700">
+              <button
+                type="button"
+                className="cursor-pointer bg-amber-500 px-1 text-white hover:bg-amber-600 transition-bg duration-300"
+              >
+                редагувати
+              </button>
+            </div>
           </div>
-          <div className="capitalize flex gap-3 pl-2 font-bold text-center bg-white py-0.5 border-b border-r border-t border-gray-700">
-            <span>петров</span>
-            <span>олександр</span>
-            <span>петрович</span>
-          </div>
-          <div className="font-bold text-center bg-white py-0.5 border-b border-r border-t border-gray-700">
-            <button
-              type="button"
-              className="cursor-pointer bg-green-500 px-1 text-white hover:bg-green-600 transition-bg duration-300"
-            >
-              переглянути
-            </button>
-          </div>
-          <div className="font-bold text-center bg-white py-0.5 border-b border-r border-t border-gray-700">
-            <button
-              type="button"
-              className="cursor-pointer bg-amber-500 px-1 text-white hover:bg-amber-600 transition-bg duration-300"
-            >
-              редагувати
-            </button>
-          </div>
-          <div className="font-bold text-center bg-white py-0.5 border-b border-r border-t border-gray-700">
-            статус
-          </div>
-        </div>
-        <div className="text-sm grid grid-cols-[10%_1fr_15%_15%_15%]">
-          <div className="font-bold text-center bg-white py-0.5 border-b border-r border-t border-l border-gray-700">
-            <span>1</span>
-          </div>
-          <div className="capitalize flex gap-3 pl-2 font-bold text-center bg-white py-0.5 border-b border-r border-t border-gray-700">
-            <span>петров</span>
-            <span>олександр</span>
-            <span>петрович</span>
-          </div>
-          <div className="font-bold text-center bg-white py-0.5 border-b border-r border-t border-gray-700">
-            <button
-              type="button"
-              className="cursor-pointer bg-green-500 px-1 text-white hover:bg-green-600 transition-bg duration-300"
-            >
-              переглянути
-            </button>
-          </div>
-          <div className="font-bold text-center bg-white py-0.5 border-b border-r border-t border-gray-700">
-            <button
-              type="button"
-              className="cursor-pointer bg-amber-500 px-1 text-white hover:bg-amber-600 transition-bg duration-300"
-            >
-              редагувати
-            </button>
-          </div>
-          <div className="font-bold text-center bg-white py-0.5 border-b border-r border-t border-gray-700">
-            статус
-          </div>
-        </div>
-        <div className="text-sm grid grid-cols-[10%_1fr_15%_15%_15%]">
-          <div className="font-bold text-center bg-white py-0.5 border-b border-r border-t border-l border-gray-700">
-            <span>1</span>
-          </div>
-          <div className="capitalize flex gap-3 pl-2 font-bold text-center bg-white py-0.5 border-b border-r border-t border-gray-700">
-            <span>петров</span>
-            <span>олександр</span>
-            <span>петрович</span>
-          </div>
-          <div className="font-bold text-center bg-white py-0.5 border-b border-r border-t border-gray-700">
-            <button
-              type="button"
-              className="cursor-pointer bg-green-500 px-1 text-white hover:bg-green-600 transition-bg duration-300"
-            >
-              переглянути
-            </button>
-          </div>
-          <div className="font-bold text-center bg-white py-0.5 border-b border-r border-t border-gray-700">
-            <button
-              type="button"
-              className="cursor-pointer bg-amber-500 px-1 text-white hover:bg-amber-600 transition-bg duration-300"
-            >
-              редагувати
-            </button>
-          </div>
-          <div className="font-bold text-center bg-white py-0.5 border-b border-r border-t border-gray-700">
-            статус
-          </div>
-        </div>
+        ))}
       </div>
       <button
         type="button"

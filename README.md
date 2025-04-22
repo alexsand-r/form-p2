@@ -5,3 +5,45 @@
 <div class="relative pb-[124%]">
     <img alt="photo" class="absolute top-0 left-0 w-full h-full object-cover" src="/public/screenshot_2.png">
 </div>
+
+# использую библиотеку air-datepicker в React 🔥
+
+Шаг 1: Установка
+npm install air-datepicker
+
+Шаг 2: Импорт стилей и JS
+import { useEffect, useRef } from "react";
+import AirDatepicker from 'air-datepicker';
+import 'air-datepicker/air-datepicker.css';
+
+Шаг 3:
+создаю компонент с календарем
+import React, { useRef, useEffect } from "react";
+import AirDatepicker from "air-datepicker";
+import "air-datepicker/air-datepicker.css";
+
+export default function MyAirDatepicker({ onDateSelect }) {
+const inputRef = useRef(null);
+
+useEffect(() => {
+const dp = new AirDatepicker(inputRef.current, {
+onSelect: ({ date }) => {
+onDateSelect && onDateSelect(date);
+},
+autoClose: true,
+dateFormat: 'dd.MM.yyyy',
+});
+
+    return () => dp.destroy(); // Очистка при размонтировании
+
+}, []);
+
+return (
+<input
+      type="text"
+      ref={inputRef}
+      placeholder="Выберите дату"
+      className="border p-2 rounded"
+    />
+);
+}

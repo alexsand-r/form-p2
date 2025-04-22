@@ -1,9 +1,10 @@
 //- tem-card.jsx
 
 import { Header } from "../../components/employee-item/header";
-// import { Title } from "../../components/employee-item/title";
-// import { Education } from "../../components/employee-item/education";
-// import { Point1234 } from "../../components/employee-item/point1234";
+import { Title } from "../../components/employee-item/title";
+import { Point1234 } from "../../components/employee-item/point1234";
+import { Education } from "../../components/employee-item/education";
+
 // import { Point5 } from "../../components/employee-item/point5";
 // import { Point67 } from "../../components/employee-item/point67";
 // import { Point89 } from "../../components/employee-item/point89";
@@ -14,15 +15,15 @@ import { Header } from "../../components/employee-item/header";
 // import { ChapterIV } from "../../components/employee-item/chapterIV";
 // import { ChapterV } from "../../components/employee-item/chapterV";
 
-export const ItemCard = ({ data }) => {
+export const ItemCard = () => {
   return (
     <>
       <div className="shadow-md">
-        <Header data={data} />
-        {/* <Title />
+        <Header />
+        <Title />
         <Point1234 />
         <Education />
-        <Point5 />
+        {/* <Point5 />
         <Point67 />
         <Point89 />
         <Point10 />
@@ -30,7 +31,7 @@ export const ItemCard = ({ data }) => {
         <ChapterII />
         <ChapterIII />
         <ChapterIV />
-        <ChapterV /> */}
+        <ChapterV />  */}
       </div>
     </>
   );

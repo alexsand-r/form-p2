@@ -1,9 +1,22 @@
 //-- title.jsx
-import user from "../../../public/screenshot_2.png";
+
+import { useSelector } from "react-redux";
+//import { useEffect } from "react";
+
+import userPhoto from "../../../public/photo.svg";
 export const Title = () => {
+  const { employeeArr } = useSelector((state) => state.employee);
+  console.log("вывожу в тайтле", employeeArr);
+
+  const lastEmployee = employeeArr[employeeArr.length - 1] || {}; // чтобы не было ошибки если массив пуст
+
+  // useEffect(() => {
+  //   console.log("вывожу в тайтле 2 :", lastEmployee);
+  // }, [lastEmployee]);
+
   return (
     <>
-      <div className="flex justify-between px-2 pt-4 bg-gray-50 ">
+      <div className="flex justify-between px-2 pt-4 bg-gray-100 ">
         <div>
           <div className="mb-2 mt-2 grid grid-cols-[100px_130px_130px_100px_130px] grid-rows-[auto_30px] text-sm text-center border border-gray-700">
             <div className="flex items-center justify-center px-1 border-b border-r border-gray-700">
@@ -21,20 +34,25 @@ export const Title = () => {
             <div className="flex items-center justify-center px-1 border-b border-gray-700">
               Вид роботи (основна, за сумісництвом)
             </div>
+            {/* Дата заповнення */}
             <div className="flex items-center justify-center px-1 border-r border-gray-700 bg-white">
-              12.02.2021
+              {lastEmployee.dateOfCompletion}
             </div>
+            {/* Табельний номер */}
             <div className="flex items-center justify-center px-1 border-r border-gray-700 bg-white">
-              2512569856
+              {lastEmployee.personnelNumber}
             </div>
+            {/* Індивідуальний ідентифікаційний номер */}
             <div className="flex items-center justify-center px-1 border-r border-gray-700 bg-white">
-              2563254125
+              {lastEmployee.individualIdentificationNumber}
             </div>
+            {/* Стать (чоловіча, жіноча) */}
             <div className="flex items-center justify-center px-1 border-r border-gray-700 bg-white">
-              ч
+              {lastEmployee.sex}
             </div>
+            {/* Вид роботи (основна, за сумісництвом) */}
             <div className="flex items-center justify-center px-1 bg-white">
-              основна
+              {lastEmployee.typeOfWork}
             </div>
           </div>
           <div>
@@ -53,9 +71,15 @@ export const Title = () => {
         <div className=" w-[115px] h-[143px] border border-gray-700 mr-4">
           <div className="relative pb-[124%]">
             <img
-              src={user}
-              alt="photo"
-              className="absolute top-0 left-0 w-full h-full object-cover"
+              src={
+                lastEmployee.photoOfWorker
+                  ? lastEmployee.photoOfWorker
+                  : userPhoto
+              }
+              alt="Фото"
+              className={`absolute top-1/2 left-1/2 object-cover transform -translate-x-1/2 -translate-y-1/2 ${
+                lastEmployee.photoOfWorker ? "w-full h-full" : "w-1/2 h-1/2"
+              }`}
             />
           </div>
         </div>
@@ -63,6 +87,3 @@ export const Title = () => {
     </>
   );
 };
-//  <div class="relative pb-[41%]">
-//     <img class=" absolute top-0 left-0 w-full h-full object-cover rounded-lg rounded-b-none" src="img/blog/01.webp" alt="Image 1">
-//  </div>

@@ -1,9 +1,9 @@
 import { configureStore } from "@reduxjs/toolkit";
-import formTopSliceReducer from "./slices/formTopSlice";
+import employeeSliceReducer from "../store/slices/employeeSlice";
 
 export const store = configureStore({
   reducer: {
-    formTopItem: formTopSliceReducer,
+    employee: employeeSliceReducer,
   },
 });
 export default store;
