@@ -4,11 +4,11 @@ import { useSelector } from "react-redux";
 
 export const Education = () => {
   const { employeeArr } = useSelector((state) => state.employee);
-  console.log("вывожу в Education", employeeArr);
+  //console.log("вывожу в Education", employeeArr);
 
   const lastEmployee = employeeArr[employeeArr.length - 1] || {}; // чтобы не было ошибки если массив пуст
-  console.log("учебное заведение- ", lastEmployee.educationalInstitutions);
-  console.log("профессия-", lastEmployee.profession);
+  // console.log("учебное заведение- ", lastEmployee.educationalInstitutions);
+  // console.log("профессия-", lastEmployee.profession);
 
   return (
     <>

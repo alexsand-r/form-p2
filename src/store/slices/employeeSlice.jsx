@@ -33,6 +33,10 @@ const employeeSlice = createSlice({
           citizenship: action.payload.citizenship,
           educationalInstitutions: action.payload.educationalInstitutions, // ✅ для таблицы учебные заведения
           profession: action.payload.profession, // ✅ для таблицы профессия специальность
+          postgraduateProfessional: action.payload.postgraduateProfessional, // ✅ для таблицы післядипломна професійна підготовка: навчання
+          graduateSchool: action.payload.graduateSchool, // ✅  аспірантурі
+          adjunct: action.payload.adjunct, // ✅ ад'юнктурі
+          doctoralStudies: action.payload.doctoralStudies, // ✅ для тдокторантурі
         });
         console.log("список работников:", state.employeeArr); // ✅ массив после добавления
       } else {
@@ -63,6 +67,10 @@ const employeeSlice = createSlice({
         citizenship,
         educationalInstitutions,
         profession,
+        postgraduateProfessional,
+        graduateSchool, // аспірантурі
+        adjunct, // ад'юнктурі
+        doctoralStudies, // докторантурі
       } = action.payload;
       const itemToEdit = state.employeeArr.find((el) => el.id === id);
       if (itemToEdit) {
@@ -82,6 +90,10 @@ const employeeSlice = createSlice({
         itemToEdit.edrpoy = citizenship;
         itemToEdit.edrpoy = educationalInstitutions;
         itemToEdit.edrpoy = profession;
+        itemToEdit.edrpoy = postgraduateProfessional;
+        itemToEdit.edrpoy = graduateSchool;
+        itemToEdit.edrpoy = adjunct;
+        itemToEdit.edrpoy = doctoralStudies;
       }
       console.log("Click on Edit btn");
     },

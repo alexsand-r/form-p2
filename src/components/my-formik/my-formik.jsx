@@ -10,6 +10,7 @@ import { validationSchema } from "../validationSchema";
 import { EducationalInstitutions } from "./my-formik-el/educationalInstitutions";
 import { Profession } from "./my-formik-el/profession";
 import { GeneralInformation } from "./my-formik-el/general-information";
+import { PostGraduate } from "./my-formik-el/post-graduate-training";
 
 export const MyFormik = ({ itemToEdit, setItemToEdit }) => {
   const dispatch = useDispatch();
@@ -52,6 +53,8 @@ export const MyFormik = ({ itemToEdit, setItemToEdit }) => {
 
           {/* Спеціальність / професія -- profession */}
           <Profession />
+          {/* post-graduate training (після дипломна підготовка) */}
+          <PostGraduate />
 
           <Button />
         </Form>

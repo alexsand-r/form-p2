@@ -29,4 +29,18 @@ export const initialValues = {
       formOfStudy: "",
     },
   ],
+
+  //--Післядипломна професійна підготовка (аспірантурі      ад'юнктурі      докторантурі)
+  graduateSchool: "", // аспірантурі
+  adjunct: "", // ад'юнктурі
+  doctoralStudies: "", // докторантурі
+
+  postgraduateProfessional: [
+    {
+      name: "",
+      documentNumber: "",
+      graduationYear: "",
+      academicBegree: "",
+    },
+  ],
 };
