@@ -1,43 +1,62 @@
-//--MyAirDatepicker
-
 import { useRef, useEffect } from "react";
 import { useField, useFormikContext } from "formik";
 import AirDatepicker from "air-datepicker/air-datepicker";
 import "air-datepicker/air-datepicker.css";
 
-export const MyAirDatepicker = ({ id, label, name, placeholder }) => {
+export const MyAirDatepicker = ({
+  id,
+  label,
+  name,
+  placeholder,
+  format = "dd.MM.yyyy",
+}) => {
   const inputRef = useRef(null);
   const { setFieldValue } = useFormikContext();
   const [field, meta] = useField(name);
+  const dpRef = useRef(null);
 
   useEffect(() => {
-    const dp = new AirDatepicker(inputRef.current, {
+    dpRef.current = new AirDatepicker(inputRef.current, {
       onSelect: ({ date }) => {
         if (date) {
-          const formattedDate = date.toLocaleDateString("ru-RU");
+          const formattedDate =
+            format === "yyyy"
+              ? date.getFullYear().toString()
+              : date.toLocaleDateString("ru-RU");
           setFieldValue(name, formattedDate);
         }
       },
       autoClose: true,
-      dateFormat: "dd.MM.yyyy",
+      dateFormat: format,
+      view: format === "yyyy" ? "years" : "days",
+      minView: format === "yyyy" ? "years" : "days",
     });
 
-    return () => dp.destroy();
-  }, [name, setFieldValue]);
+    return () => {
+      dpRef.current?.destroy();
+    };
+  }, [name, setFieldValue, format]);
 
-  // Обработка ручного ввода
   const handleChange = (e) => {
-    const value = e.target.value;
+    const value = e.target.value.replace(/,/g, ".");
     setFieldValue(name, value);
 
-    // Здесь можно добавить валидацию формата "дд.мм.гггг"
-    const isValidFormat = /^\d{2}\.\d{2}\.\d{4}$/.test(value);
-    if (isValidFormat) {
-      const [day, month, year] = value.split(".");
-      const parsedDate = new Date(year, month - 1, day);
-      if (!isNaN(parsedDate.getTime())) {
-        // Если дата корректна — можно синхронизировать с календарем
-        inputRef.current.airDatepicker.selectDate(parsedDate);
+    if (format === "yyyy") {
+      const year = parseInt(value, 10);
+      if (!isNaN(year) && value.length === 4 && year >= 1000 && year <= 9999) {
+        const parsedDate = new Date(year, 0, 1);
+        if (!isNaN(parsedDate.getTime())) {
+          dpRef.current?.selectDate(parsedDate);
+        }
+      }
+    } else {
+      const isValidFormat = /^\d{2}\.\d{2}\.\d{4}$/.test(value);
+      if (isValidFormat) {
+        const [day, month, year] = value.split(".");
+        const parsedDate = new Date(year, month - 1, day);
+        if (!isNaN(parsedDate.getTime())) {
+          dpRef.current?.selectDate(parsedDate);
+        }
       }
     }
   };

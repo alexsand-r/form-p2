@@ -6,7 +6,7 @@ import { useSelector } from "react-redux";
 import userPhoto from "../../../public/photo.svg";
 export const Title = () => {
   const { employeeArr } = useSelector((state) => state.employee);
-  console.log("вывожу в тайтле", employeeArr);
+  //console.log("вывожу в тайтле", employeeArr);
 
   const lastEmployee = employeeArr[employeeArr.length - 1] || {}; // чтобы не было ошибки если массив пуст
 

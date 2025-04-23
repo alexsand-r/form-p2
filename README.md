@@ -1,5 +1,7 @@
 # React + Vite
 
+https://www.buhoblik.org.ua/normativka/001/buh0385.html
+
 адаптивное изображение
 
 <div class="relative pb-[124%]">

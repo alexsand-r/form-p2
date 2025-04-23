@@ -4,9 +4,12 @@ import { useSelector } from "react-redux";
 
 export const Education = () => {
   const { employeeArr } = useSelector((state) => state.employee);
-  console.log("вывожу в тайтле", employeeArr);
+  console.log("вывожу в Education", employeeArr);
 
   const lastEmployee = employeeArr[employeeArr.length - 1] || {}; // чтобы не было ошибки если массив пуст
+  console.log("учебное заведение- ", lastEmployee.educationalInstitutions);
+  console.log("профессия-", lastEmployee.profession);
+
   return (
     <>
       <div>
@@ -60,13 +63,13 @@ export const Education = () => {
               className="px-2 bg-gray-100 grid grid-cols-[55%_30%_15%] gap-y-0.5 mb-0.5"
             >
               <div className="pl-2 text-center bg-white py-0.5 border-b border-r border-t border-l border-gray-700">
-                {prof.name}
+                {prof.profes}
               </div>
               <div className="pl-2 text-center bg-white py-0.5 border-b border-r border-t border-gray-700">
-                {prof.documentNumber}
+                {prof.qualification}
               </div>
               <div className="pl-2 text-center bg-white py-0.5 border-b border-r border-t border-gray-700">
-                {prof.graduationYear}
+                {prof.formOfStudy}
               </div>
             </div>
           ))}

@@ -51,7 +51,9 @@ export const validationSchema = Yup.object({
     Yup.object().shape({
       name: Yup.string().required("Обов'язково"),
       documentNumber: Yup.string().required("Обов'язково"),
-      graduationYear: Yup.string().required("Обов'язково"),
+      graduationYear: Yup.date()
+        .typeError("Оберіть дату")
+        .required("Обов'язково"),
     })
   ),
 });
