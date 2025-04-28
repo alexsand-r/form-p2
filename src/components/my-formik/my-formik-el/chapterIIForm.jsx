@@ -2,7 +2,7 @@
 
 import { Input } from "./input";
 
-export const BlockIIForm = () => {
+export const ChapterIIForm = () => {
   return (
     <>
       <h2 className="text-lg text-center mt-4">

@@ -15,7 +15,7 @@ import { Point67Form } from "./my-formik-el/Point67Form";
 import { Point89Form } from "./my-formik-el/point89Form";
 import { Point10Form } from "./my-formik-el/point10Form";
 import { Point11a12Form } from "./my-formik-el/point11a12Form";
-import { BlockIIForm } from "./my-formik-el/blockIIForm";
+import { ChapterIIForm } from "./my-formik-el/chapterIIForm";
 
 export const MyFormik = ({ itemToEdit, setItemToEdit }) => {
   const dispatch = useDispatch();
@@ -72,7 +72,9 @@ export const MyFormik = ({ itemToEdit, setItemToEdit }) => {
           <Point11a12Form />
 
           {/* ІІ. ВІДОМОСТІ ПРО ВІЙСЬКОВИЙ ОБЛІК */}
-          <BlockIIForm />
+          <ChapterIIForm />
+
+          {/* ІІІ. ПРОФЕСІЙНА ОСВІТА НА ВИРОБНИЦТВІ (ЗА РАХУНОК ПІДПРИЄМСТВА-РОБОТОДАВЦЯ) */}
 
           <Button />
         </Form>
