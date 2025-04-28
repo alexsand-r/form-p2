@@ -1,34 +1,31 @@
-//--profession (Спеціальність / професія)
+//-- point10
 
+import { Input } from "./input";
+import { MyAirDatepicker } from "../../my-air-datepicker";
 import { FieldArray } from "formik";
 import plus from "../../../../public/plus.svg";
 import minus from "../../../../public/minus.svg";
-import { Input } from "../my-formik-el/input";
-import { SelectField } from "../../customStylesSelect/selectField";
-import {
-  customStyles,
-  formOfStudy,
-} from "../../customStylesSelect/customStyles";
-import { SelectField2 } from "../../customStylesSelect/selectField2";
 
-export const Profession = () => {
+export const Point10Form = () => {
   return (
     <>
-      <h2 className="text-lg text-center mt-4">
-        Спеціальність (професія) за дипломом
-      </h2>
-      <FieldArray name="profession">
+      <h2 className="text-lg text-center">10. Родинний стан</h2>
+      <div className="mb-4">
+        <Input label="Родинний стан:" name="maritalStatus" placeholder="..." />
+      </div>
+
+      <FieldArray name="familyComposition">
         {({ push, remove, form }) => (
           <>
-            {form.values.profession.map((_, index) => (
+            {form.values.familyComposition.map((_, index) => (
               <div
                 key={index}
-                className="grid grid-cols-[50%_30%_19%] gap-1 gap-x-1 mb-2"
+                className="grid grid-cols-[35%_45%_19%] gap-1 gap-x-1 mb-2"
               >
                 <div className="relative">
                   <Input
-                    label="Професія:"
-                    name={`profession[${index}].profes`}
+                    label="Ступінь родинного зв'язку (склад сім'ї):"
+                    name={`familyComposition[${index}].degreeOfFamilyRelationship`}
                     placeholder="..."
                   />
                   {index > 0 && (
@@ -48,16 +45,15 @@ export const Profession = () => {
                 </div>
 
                 <Input
-                  label="Кваліфікація:"
-                  name={`profession[${index}].qualification`}
+                  label="П. І. Б."
+                  name={`familyComposition[${index}].fullName`}
                   placeholder="..."
                 />
-                <SelectField2
-                  label="Форма навчання"
-                  name={`profession[${index}].formOfStudy`}
-                  options={formOfStudy}
-                  styles={customStyles}
+                <MyAirDatepicker
+                  label="Рік народження"
+                  name={`familyComposition[${index}].yearOfBirth`}
                   placeholder="..."
+                  format="yyyy"
                 />
               </div>
             ))}
@@ -65,7 +61,11 @@ export const Profession = () => {
               <button
                 type="button"
                 onClick={() =>
-                  push({ profes: "", qualification: "", formOfStudy: "" })
+                  push({
+                    degreeOfFamilyRelationship: "",
+                    fullName: "",
+                    yearOfBirth: "",
+                  })
                 }
                 className="bg-transparent"
               >

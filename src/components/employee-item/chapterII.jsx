@@ -3,7 +3,7 @@
 export const ChapterII = () => {
   return (
     <>
-      <div className="px-2 bg-gray-50 text-sm pt-2">
+      <div className="px-2 bg-[var(--main-bg-color)]  text-sm pt-2">
         <p className="text-sm font-bold">ІІ. ВІДОМОСТІ ПРО ВІЙСЬКОВИЙ ОБЛІК</p>
         <div className="flex gap-3 justify-between">
           <div className="flex-1/2">

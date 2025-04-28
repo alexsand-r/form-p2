@@ -49,3 +49,20 @@ return (
     />
 );
 }
+
+# делаю стили через переменный 🔥
+
+в файле index.css добавить в рут
+
+@import "tailwindcss";
+
+#root {
+width: 100%;
+max-width: 824px;
+padding: 0 15px;
+
+--main-color-line: #b9babc; // 👉 вот это добавил
+}
+
+👉 <div className="w-full h-0.5 bg-[var(--main-color-line)] mt-[14px]"></div> // так в компоненте 🚀
+👉 bg-[var(--main-bg-color)]

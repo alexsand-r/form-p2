@@ -15,7 +15,7 @@ export const Point5 = () => {
   // console.log("Післядипломна професійна підготовка-", lastEmployee.profession);
   return (
     <>
-      <div className="px-2 bg-gray-50 text-sm">
+      <div className="px-2 bg-[var(--main-bg-color)] text-sm">
         <div className="flex gap-1">
           <p className="flex items-end">
             5. Післядипломна професійна підготовка: навчання

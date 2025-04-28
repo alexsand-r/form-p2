@@ -1,19 +1,28 @@
 //--eight nine
+import { useSelector } from "react-redux";
 
 export const Point89 = () => {
+  const { employeeArr } = useSelector((state) => state.employee);
+  //console.log("вывожу в тайтле", employeeArr);
+
+  const lastEmployee = employeeArr[employeeArr.length - 1] || {}; // чтобы не было ошибки если массив пуст
+
+  // useEffect(() => {
+  //   console.log("вывожу в стаж роботи: - ", lastEmployee);
+  // }, [lastEmployee]);
   return (
     <>
-      <div className="px-2 bg-gray-50 text-sm pt-2">
+      <div className="px-2 bg-[var(--main-bg-color)] text-sm pt-2">
         <p className=" flex gap-2">
           8. Дата та причина звільнення (скорочення штатів; за власним бажанням,
           за прогул та інші порушення, невідповідність займаній посаді тощо)
           <span className="w-[250px] bg-white block border-b border-b-gray-700 pl-4 text-base font-semibold text-center self-end">
-            02.05.2021 p
+            {lastEmployee.releaseDate}
           </span>
         </p>
         <div>
           <span className="w-[780px] bg-white block border-b border-b-gray-700 pl-4 text-base font-semibold">
-            скорочення штатов
+            {lastEmployee.reasonForDismissal}
           </span>
         </div>
         <p className=" flex gap-2">
@@ -22,7 +31,7 @@ export const Point89 = () => {
         </p>
         <div>
           <span className="w-[780px] bg-white block border-b border-b-gray-700 pl-4 text-base font-semibold">
-            за виком
+            {lastEmployee.informationAboutReceivingPension}
           </span>
         </div>
       </div>

@@ -22,7 +22,8 @@ body {
     max-width: 824px;
     padding: 0 15px;
     /* background-color: aqua; */
-
+    --main-color-line: #b9babc;
+    --main-bg-color: #F3F4F6;
 }
-
+/* #F3F4F6 */
 

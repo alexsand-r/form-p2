@@ -9,7 +9,7 @@ export const EducationalInstitutions = () => {
   return (
     <>
       {/* Навчальні заклади */}
-      <h2 className="text-lg text-center mt-4">Навчальні заклади</h2>
+      <h2 className="text-lg text-center mt-4">5. Навчальні заклади</h2>
       <FieldArray name="educationalInstitutions">
         {({ push, remove, form }) => (
           <>
@@ -70,6 +70,7 @@ export const EducationalInstitutions = () => {
           </>
         )}
       </FieldArray>
+      <div className="w-full h-0.5 bg-[var(--main-color-line)] mt-[14px]"></div>
     </>
   );
 };

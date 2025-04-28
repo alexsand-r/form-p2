@@ -99,6 +99,7 @@ export const PostGraduate = () => {
           )}
         </FieldArray>
       </div>
+      <div className="w-full h-0.5 bg-[var(--main-color-line)] mt-[14px]"></div>
     </>
   );
 };

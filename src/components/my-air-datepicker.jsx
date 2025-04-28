@@ -74,7 +74,7 @@ export const MyAirDatepicker = ({
         value={field.value}
         onChange={handleChange}
         placeholder={placeholder}
-        className="shadow-md text-lg bg-gray-50 border-2 border-gray-300 text-gray-900 rounded-lg focus:border-blue-500 w-full px-2.5 py-2"
+        className="shadow-md text-center text-lg bg-gray-50 border-2 border-gray-300 text-gray-900 rounded-lg focus:border-blue-500 w-full px-2.5 py-2"
       />
       {meta.touched && meta.error && (
         <div className="text-red-500 text-sm mt-1">{meta.error}</div>
@@ -82,6 +82,8 @@ export const MyAirDatepicker = ({
     </div>
   );
 };
+// format="dd.MM.yyyy"
+//format="yyyy"
 
 // красит бордер в красный цвет
 //   className={`shadow-md text-lg bg-gray-50 border-2 rounded-lg w-full px-2.5 py-2

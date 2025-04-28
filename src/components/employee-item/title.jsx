@@ -16,7 +16,7 @@ export const Title = () => {
 
   return (
     <>
-      <div className="flex justify-between px-2 pt-4 bg-gray-100 ">
+      <div className="flex justify-between px-2 pt-4 bg-[var(--main-bg-color)]  ">
         <div>
           <div className="mb-2 mt-2 grid grid-cols-[100px_130px_130px_100px_130px] grid-rows-[auto_30px] text-sm text-center border border-gray-700">
             <div className="flex items-center justify-center px-1 border-b border-r border-gray-700">

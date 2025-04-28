@@ -43,4 +43,45 @@ export const initialValues = {
       academicBegree: "",
     },
   ],
+  // пункти 6-7
+  lastPlaceOfWork: "", // останее місце роботи
+  positionProfession: "", // посада (професія)
+  workExperience: "", // Стаж роботи  станом на
+  genaralDay: "", // загальний стаж днів
+  genaralMounth: "", // загальний стаж місяців
+  genaralYears: "", // загальний стаж років
+  serviceDays: "", // вислуга днів
+  monthsOfService: "", // вислуга місяців
+  yearsOfService: "", // вислуга років
+  // пункти 8-9
+  releaseDate: "", // Дата звільнення
+  reasonForDismissal: "", // Причина звільнення
+  informationAboutReceivingPension: "", // Відомості про отримання пенсії
+  // пункти 10 родинний звязок
+  maritalStatus: "", //  Родинний стан
+  familyComposition: [
+    {
+      degreeOfFamilyRelationship: "",
+      fullName: "",
+      yearOfBirth: "",
+    },
+  ],
+  // 11 -12 Місце проживання
+  actualPlaceOfResidence: "", // Місце проживання:
+  placeOfResidenceRegistration: "", // Місце проживання за державною реєстрацією
+  passportSeries: "", // Паспорт: серія
+  passportNumber: "", // Паспорт: N :
+  byWhomIssued: "", // byWhomIssued
+  dateOfIssue: "", // дата видачі
+
+  //ВІДОМОСТІ ПРО ВІЙСЬКОВИЙ ОБЛІК
+  accountingGroup: "", // Група обліку
+  eligibilityMilitary: "", // Придатність до військової служби
+  categoriaGroup: "", // Категорія обліку
+  nameOfDistrictMilitary: "", // Назва райвійськкомату за місцем реєстрації
+  composition: "", // Склад:
+  nameDistrictActual: "", // Назва райвійськкомату за місцем фактичного проживання
+  militaryRank: "", // Військове звання
+  stayingSpecialRegistration: "", // Перебування на спеціальному обліку
+  militaryAccountingSpecialty: "", // Військово-облікова спеціальність N
 };

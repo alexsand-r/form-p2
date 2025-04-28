@@ -14,7 +14,6 @@ import {
 export const GeneralInformation = () => {
   return (
     <>
-      <h1 className="text-lg text-center">I ЗАГАЛЬНІ ВІДОМОСТІ</h1>
       <div className="grid grid-cols-2 gap-1 gap-x-4 mb-4">
         <Input
           label="Найменування підприємства:"
@@ -53,24 +52,30 @@ export const GeneralInformation = () => {
           placeholder="..."
         />
         <InputFile label="Фото співробітника" name="photoOfWorker" />
-        <Input label="Прізвище:" name="name" placeholder="..." />
-        <Input label="Ім'я:" name="firstName" placeholder="..." />
-        <Input label="По батькові:" name="lastName" placeholder="..." />
+      </div>
+
+      <h1 className="text-lg text-center">I ЗАГАЛЬНІ ВІДОМОСТІ</h1>
+
+      <div className="grid grid-cols-2 gap-1 gap-x-4 mb-4">
+        <Input label="1. Прізвище:" name="name" placeholder="..." />
+        <Input label="1.1 Ім'я:" name="firstName" placeholder="..." />
+        <Input label="1.2 По батькові:" name="lastName" placeholder="..." />
         <MyAirDatepicker
-          label="Дата народження"
+          label="2. Дата народження"
           name="dateOfBirth"
           placeholder="..."
           format="dd.MM.yyyy"
         />
         <SelectField
-          label="Освіта"
+          label="3. Освіта"
           name="education"
           options={education}
           styles={customStyles}
           placeholder="..."
         />
-        <Input label="Громадянство:" name="citizenship" placeholder="..." />
+        <Input label="4. Громадянство:" name="citizenship" placeholder="..." />
       </div>
+      <div className="w-full h-0.5 bg-[var(--main-color-line)] mt-[14px]"></div>
     </>
   );
 };
