@@ -10,7 +10,7 @@ import { Point89 } from "../../components/employee-item/point89";
 import { Point10 } from "../../components/employee-item/point10";
 import { Point11a12 } from "../../components/employee-item/point11a12";
 import { ChapterII } from "../../components/employee-item/chapterII";
-// import { ChapterIII } from "../../components/employee-item/chapterIII";
+import { ChapterIII } from "../../components/employee-item/chapterIII";
 // import { ChapterIV } from "../../components/employee-item/chapterIV";
 // import { ChapterV } from "../../components/employee-item/chapterV";
 
@@ -28,8 +28,8 @@ export const ItemCard = () => {
         <Point10 />
         <Point11a12 />
         <ChapterII />
-        {/* <ChapterIII />
-        <ChapterIV />
+        <ChapterIII />
+        {/* <ChapterIV />
         <ChapterV /> */}
       </div>
     </>

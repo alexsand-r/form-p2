@@ -1,6 +1,13 @@
 //-- chapterIII
+import { useSelector } from "react-redux";
 
 export const ChapterIII = () => {
+  const { employeeArr } = useSelector((state) => state.employee);
+  //console.log("вывожу в Education", employeeArr);
+
+  const lastEmployee = employeeArr[employeeArr.length - 1] || {}; // чтобы не было ошибки если массив пуст
+  // console.log("учебное заведение- ", lastEmployee.educationalInstitutions);
+  // console.log("профессия-", lastEmployee.profession);
   return (
     <>
       <div className="px-2 bg-[var(--main-bg-color)] text-sm pt-2">
@@ -9,7 +16,6 @@ export const ChapterIII = () => {
           ПІДПРИЄМСТВА-РОБОТОДАВЦЯ)
         </p>
         <div className="text-sm grid grid-cols-[10%_1fr_10%_15%_15%_1fr]">
-          {/* header */}
           <div className="font-bold text-center bg-white p-0.5 border-b border-r border-t border-l border-gray-700">
             Дата
           </div>
@@ -18,6 +24,10 @@ export const ChapterIII = () => {
           </div>
           <div className="font-bold text-center bg-white p-0.5 border-b border-r border-t border-gray-700">
             Період навчання
+            <div className="flex justify-between">
+              <div className="pl-1.5">з</div>
+              <div className="pr-1.5">по</div>
+            </div>
           </div>
           <div className="font-bold text-center bg-white p-0.5 border-b border-r border-t border-gray-700">
             Вид навчання
@@ -25,21 +35,42 @@ export const ChapterIII = () => {
           <div className="font-bold text-center bg-white p-0.5 border-b border-r border-t border-gray-700">
             Форма навчання
           </div>
-          <div className="font-bold text-left bg-white px-1 border-b border-r border-t border-gray-700">
+          <div className="font-bold text-center bg-white px-1 border-b border-r border-t border-gray-700">
             Назва документа, що посвідчує професійну освіту, ким виданий
           </div>
-          {/* line */}
-          <div className="pl-2 bg-white py-0.5 border-b border-r border-l border-gray-700">
-            01.03.2006
-          </div>
-          <div className="pl-2 text-center bg-white py-0.5 border-b border-r border-gray-700"></div>
-          <div className="text-center bg-white py-0.5 border-b border-r border-gray-700">
-            2006-2009
-          </div>
-          <div className="pl-2 bg-white py-0.5 border-b border-r border-gray-700"></div>
-          <div className="pl-2 text-center bg-white py-0.5 border-b border-r border-gray-700"></div>
-          <div className="text-center bg-white py-0.5 border-b border-r border-gray-700"></div>
         </div>
+
+        {/* тут мапить наверное */}
+        {Array.isArray(lastEmployee.onTheJob) &&
+          lastEmployee.onTheJob.map((job, index) => (
+            <div
+              key={index}
+              className="px-2 bg-gray-100 grid grid-cols-[10%_1fr_10%_15%_15%_1fr] gap-y-0.5 mb-0.5"
+            >
+              <div className="pl-2 text-center bg-white py-0.5 border-b border-r border-t border-l border-gray-700">
+                {job.dateOfstudy}
+              </div>
+              <div className="pl-2 text-center bg-white py-0.5 border-b border-r border-t border-gray-700">
+                {job.nameStructuralUnit}
+              </div>
+              <div className="pl-2 text-center bg-white py-0.5 border-b border-r border-t border-gray-700">
+                <div className="flex justify-between">
+                  <div>{job.trainingPeriodWith}</div>
+                  <div>{job.trainingPeriod}</div>
+                </div>
+              </div>
+
+              <div className="pl-2 text-center bg-white py-0.5 border-b border-r border-t border-gray-700">
+                {job.typeOfTraining}
+              </div>
+              <div className="pl-2 text-center bg-white py-0.5 border-b border-r border-t border-gray-700">
+                {job.onTheJobTraining}
+              </div>
+              <div className="pl-2 text-center bg-white py-0.5 border-b border-r border-t border-gray-700">
+                {job.documentCertifyingProfessional}
+              </div>
+            </div>
+          ))}
       </div>
     </>
   );
