@@ -26,15 +26,16 @@ export const ChapterIIIForm = () => {
                   key={index}
                   className="grid grid-cols-2 gap-1 gap-x-1 mb-2"
                 >
-                  <Input
-                    label="Дата:"
+                  <MyAirDatepicker
+                    label="Дата"
                     name={`onTheJob[${index}].dateOfstudy`}
                     placeholder="..."
+                    format="dd.MM.yyyy"
                   />
 
                   <Input
                     label="Назва структурного підрозділу:"
-                    name={`onTheJob[${index}].eligibilityMilitary`}
+                    name={`onTheJob[${index}].nameStructuralUnit`}
                     placeholder="..."
                   />
                   <MyAirDatepicker
@@ -56,7 +57,7 @@ export const ChapterIIIForm = () => {
                   />
                   <SelectField2
                     label="Форма навчання"
-                    name={`onTheJobTraining[${index}].formOfStudy`}
+                    name={`onTheJob[${index}].formOfStudy`}
                     options={formOfStudy}
                     styles={customStyles}
                     placeholder="..."

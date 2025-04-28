@@ -21,7 +21,7 @@ export const SelectField2 = ({ label, name, options, styles, placeholder }) => (
               selectedOption ? selectedOption.value : ""
             );
           }}
-          value={options.find((option) => option.value === field.value)}
+          value={options.find((option) => option.value === field.value) || null}
         />
       )}
     </Field>

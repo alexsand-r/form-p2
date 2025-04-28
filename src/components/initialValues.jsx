@@ -84,4 +84,17 @@ export const initialValues = {
   militaryRank: "", // Військове звання
   stayingSpecialRegistration: "", // Перебування на спеціальному обліку
   militaryAccountingSpecialty: "", // Військово-облікова спеціальність N
+
+  // ІІІ. ПРОФЕСІЙНА ОСВІТА НА ВИРОБНИЦТВІ (ЗА РАХУНОК ПІДПРИЄМСТВА-РОБОТОДАВЦЯ)
+  onTheJob: [
+    {
+      dateOfstudy: "", // дата окончания обучения
+      nameStructuralUnit: "", // Назва структурного підрозділу
+      trainingPeriodWith: "", // Період навчання з
+      trainingPeriod: "", // Період навчання по
+      typeOfTraining: "", // Вид навчання
+      formOfStudy: "", // форма навчання на виробництви
+      documentCertifyingProfessional: "", // Назва документа, що посвідчує професійну освіту, ким виданий
+    },
+  ],
 };

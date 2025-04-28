@@ -71,6 +71,9 @@ const employeeSlice = createSlice({
           stayingSpecialRegistration: action.payload.stayingSpecialRegistration, // Перебування на спеціальному обліку
           militaryAccountingSpecialty:
             action.payload.militaryAccountingSpecialty, // Військово-облікова спеціальність N
+
+          // ІІІ. ПРОФЕСІЙНА ОСВІТА НА ВИРОБНИЦТВІ (ЗА РАХУНОК ПІДПРИЄМСТВА-РОБОТОДАВЦЯ)
+          onTheJob: action.payload.onTheJob, // ✅ для таблиця ПРОФЕСІЙНА ОСВІТА НА ВИРОБНИЦТВІ
         });
         console.log("список работников:", state.employeeArr); // ✅ массив после добавления
       } else {
@@ -125,6 +128,7 @@ const employeeSlice = createSlice({
         passportNumber, // Паспорт: N :
         byWhomIssued, // byWhomIssued
         dateOfIssue, // дата видачі
+
         //ВІДОМОСТІ ПРО ВІЙСЬКОВИЙ ОБЛІК
         accountingGroup, // Група обліку
         eligibilityMilitary, // Придатність до військової служби
@@ -135,6 +139,9 @@ const employeeSlice = createSlice({
         militaryRank, // Військове звання
         stayingSpecialRegistration, // Перебування на спеціальному обліку
         militaryAccountingSpecialty, // Військово-облікова спеціальність N
+
+        // ІІІ. ПРОФЕСІЙНА ОСВІТА НА ВИРОБНИЦТВІ (ЗА РАХУНОК ПІДПРИЄМСТВА-РОБОТОДАВЦЯ)
+        onTheJob, // ПРОФЕСІЙНА ОСВІТА НА ВИРОБНИЦТВІ
       } = action.payload;
       const itemToEdit = state.employeeArr.find((el) => el.id === id);
       if (itemToEdit) {
@@ -178,7 +185,8 @@ const employeeSlice = createSlice({
         itemToEdit.edrpoy = passportNumber; // Паспорт: N :
         itemToEdit.edrpoy = byWhomIssued; // byWhomIssued
         itemToEdit.edrpoy = dateOfIssue; // дата видачі
-        //ВІДОМОСТІ ПРО ВІЙСЬКОВИЙ ОБЛІК
+
+        // II ВІДОМОСТІ ПРО ВІЙСЬКОВИЙ ОБЛІК
         itemToEdit.edrpoy = accountingGroup; // Група обліку
         itemToEdit.edrpoy = eligibilityMilitary; // Придатність до військової служби
         itemToEdit.edrpoy = categoriaGroup; // Категорія обліку
@@ -188,6 +196,9 @@ const employeeSlice = createSlice({
         itemToEdit.edrpoy = militaryRank; // Військове звання
         itemToEdit.edrpoy = stayingSpecialRegistration; // Перебування на спеціальному обліку
         itemToEdit.edrpoy = militaryAccountingSpecialty; // Військово-облікова спеціальність N
+
+        // ІІІ. ПРОФЕСІЙНА ОСВІТА НА ВИРОБНИЦТВІ (ЗА РАХУНОК ПІДПРИЄМСТВА-РОБОТОДАВЦЯ)
+        itemToEdit.edrpoy = onTheJob; // таблица ПРОФЕСІЙНА ОСВІТА НА ВИРОБНИЦТВІ
       }
       console.log("Click on Edit btn");
     },

@@ -15,7 +15,7 @@ export const ChapterIII = () => {
           ІІІ. ПРОФЕСІЙНА ОСВІТА НА ВИРОБНИЦТВІ (ЗА РАХУНОК
           ПІДПРИЄМСТВА-РОБОТОДАВЦЯ)
         </p>
-        <div className="text-sm grid grid-cols-[10%_1fr_10%_15%_15%_1fr]">
+        <div className="text-sm grid grid-cols-[10%_1fr_10%_15%_15%_1fr] mb-0.5">
           <div className="font-bold text-center bg-white p-0.5 border-b border-r border-t border-l border-gray-700">
             Дата
           </div>
@@ -45,7 +45,7 @@ export const ChapterIII = () => {
           lastEmployee.onTheJob.map((job, index) => (
             <div
               key={index}
-              className="px-2 bg-gray-100 grid grid-cols-[10%_1fr_10%_15%_15%_1fr] gap-y-0.5 mb-0.5"
+              className=" bg-gray-100 grid grid-cols-[10%_1fr_10%_15%_15%_1fr] gap-y-0.5 mb-0.5"
             >
               <div className="pl-2 text-center bg-white py-0.5 border-b border-r border-t border-l border-gray-700">
                 {job.dateOfstudy}
@@ -54,8 +54,9 @@ export const ChapterIII = () => {
                 {job.nameStructuralUnit}
               </div>
               <div className="pl-2 text-center bg-white py-0.5 border-b border-r border-t border-gray-700">
-                <div className="flex justify-between">
+                <div className="flex justify-between flex-wrap">
                   <div>{job.trainingPeriodWith}</div>
+
                   <div>{job.trainingPeriod}</div>
                 </div>
               </div>
@@ -64,7 +65,7 @@ export const ChapterIII = () => {
                 {job.typeOfTraining}
               </div>
               <div className="pl-2 text-center bg-white py-0.5 border-b border-r border-t border-gray-700">
-                {job.onTheJobTraining}
+                {job.formOfStudy}
               </div>
               <div className="pl-2 text-center bg-white py-0.5 border-b border-r border-t border-gray-700">
                 {job.documentCertifyingProfessional}

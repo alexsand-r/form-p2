@@ -16,6 +16,7 @@ import { Point89Form } from "./my-formik-el/point89Form";
 import { Point10Form } from "./my-formik-el/point10Form";
 import { Point11a12Form } from "./my-formik-el/point11a12Form";
 import { ChapterIIForm } from "./my-formik-el/chapterIIForm";
+import { ChapterIIIForm } from "./my-formik-el/chapterIIIForm";
 
 export const MyFormik = ({ itemToEdit, setItemToEdit }) => {
   const dispatch = useDispatch();
@@ -75,7 +76,7 @@ export const MyFormik = ({ itemToEdit, setItemToEdit }) => {
           <ChapterIIForm />
 
           {/* ІІІ. ПРОФЕСІЙНА ОСВІТА НА ВИРОБНИЦТВІ (ЗА РАХУНОК ПІДПРИЄМСТВА-РОБОТОДАВЦЯ) */}
-
+          <ChapterIIIForm />
           <Button />
         </Form>
       </Formik>
