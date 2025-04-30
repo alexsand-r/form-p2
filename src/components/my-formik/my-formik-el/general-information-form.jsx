@@ -1,7 +1,7 @@
 // -- I ЗАГАЛЬНІ ВІДОМОСТІ  general information
-
-import { InputFile } from "../my-formik-el/input-file";
-import { Input } from "../my-formik-el/input";
+import React from "react"; // <-- нужно обязательно
+import { InputFile } from "./input-file";
+import { Input } from "./input";
 import { MyAirDatepicker } from "../../my-air-datepicker";
 import { SelectField } from "../../customStylesSelect/selectField";
 import {
@@ -11,16 +11,10 @@ import {
   education,
 } from "../../customStylesSelect/customStyles";
 
-export const GeneralInformation = () => {
+export const GeneralInformationForm = React.memo(() => {
   return (
     <>
       <div className="grid grid-cols-2 gap-1 gap-x-4 mb-4">
-        <Input
-          label="Найменування підприємства:"
-          name="nameOfEnterprise"
-          placeholder="..."
-        />
-        <Input label="Код ЄДРПОУ:" name="edrpoy" placeholder="..." />
         <MyAirDatepicker
           label="Дата заповнення"
           name="dateOfCompletion"
@@ -66,16 +60,16 @@ export const GeneralInformation = () => {
           placeholder="..."
           format="dd.MM.yyyy"
         />
+        <Input label="3. Громадянство:" name="citizenship" placeholder="..." />
         <SelectField
-          label="3. Освіта"
+          label="4. Освіта"
           name="education"
           options={education}
           styles={customStyles}
           placeholder="..."
         />
-        <Input label="4. Громадянство:" name="citizenship" placeholder="..." />
       </div>
       <div className="w-full h-0.5 bg-[var(--main-color-line)] mt-[14px]"></div>
     </>
   );
-};
+});

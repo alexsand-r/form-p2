@@ -2,9 +2,12 @@
 import { useSelector } from "react-redux";
 
 export const Header = () => {
-  const { employeeArr } = useSelector((state) => state.employee);
+  //const { employeeArr } = useSelector((state) => state.employee); //👉 рендерю массив
+  const { selectedEmployee } = useSelector((state) => state.employee); //👉 рендерю отдельный елемент
+
   //console.log("вывожу в хедере", employeeArr);
-  const lastEmployee = employeeArr[employeeArr.length - 1] || {}; // чтобы не было ошибки если массив пуст
+  //const employeeItem = employeeArr[employeeArr.length - 1] || {}; // чтобы не было ошибки если массив пуст
+  const employeeItem = selectedEmployee || {}; // пустой объект, если нет выбранного
 
   return (
     <>
@@ -12,7 +15,7 @@ export const Header = () => {
         <div className="w-[50%] pb-1">
           <div>
             <p className="text-center w-full bg-white">
-              {lastEmployee.nameOfEnterprise}
+              {employeeItem.nameOfEnterprise}
             </p>
             <p className="block w-full h-[1px] bg-gray-900"></p>
             <p className="text-[10px] text-center">
@@ -25,7 +28,7 @@ export const Header = () => {
               <p className="whitespace-nowrap text-sm">Код ЄДРПОУ</p>
             </div>
             <p className="text-center border-b border-gray-900 w-full bg-white">
-              {lastEmployee.edrpoy}
+              {employeeItem.edrpoy}
             </p>
           </div>
         </div>

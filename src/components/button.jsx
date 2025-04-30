@@ -1,4 +1,4 @@
-export const Button = () => {
+export const Button = ({ itemToEdit }) => {
   //console.log("itemToEdit в Button:", itemToEdit); // ⬅️ Это важно!
   return (
     <>
@@ -7,8 +7,7 @@ export const Button = () => {
           type="submit"
           className="text-white bg-blue-500 px-2 py-1 rounded-md cursor-pointer hover:bg-blue-400 transition-bg duration-300 border-2 border-inherit hover:border-blue-700"
         >
-          {/* {itemToEdit ? "edit item" : "add item "} */}
-          Додати
+          {itemToEdit ? "Редагувати" : "Додати"}
         </button>
       </div>
     </>

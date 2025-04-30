@@ -1,11 +1,18 @@
 //-- chapterIV
+import { useSelector } from "react-redux";
 
 export const ChapterIV = () => {
+  const { employeeArr } = useSelector((state) => state.employee);
+  //console.log("вывожу в Education", employeeArr);
+
+  const lastEmployee = employeeArr[employeeArr.length - 1] || {}; // чтобы не было ошибки если массив пуст
+  // console.log("учебное заведение- ", lastEmployee.educationalInstitutions);
+  // console.log("профессия-", lastEmployee.profession);
   return (
     <>
       <div className="px-2 bg-[var(--main-bg-color)] text-sm pt-2">
         <p className="text-sm font-bold">IV. ПРИЗНАЧЕННЯ І ПЕРЕВЕДЕННЯ</p>
-        <div className="text-sm grid grid-cols-[10%_1fr_10%_10%_10%_17%_13%]">
+        <div className="text-sm grid grid-cols-[10%_1fr_10%_10%_10%_17%_13%] mb-0.5">
           {/* header */}
           <div className="font-bold text-center bg-white p-0.5 border-b border-r border-t border-l border-gray-700">
             Дата
@@ -22,25 +29,44 @@ export const ChapterIV = () => {
           <div className="font-bold text-center bg-white p-0.5 border-b border-r border-t border-gray-700">
             Розряд (оклад)
           </div>
-          <div className="font-bold text-left bg-white px-1 border-b border-r border-t border-gray-700">
+          <div className="font-bold text-center bg-white px-1 border-b border-r border-t border-gray-700">
             Підстава, наказ N
           </div>
-          <div className="font-bold text-left bg-white px-1 border-b border-r border-t border-gray-700">
+          <div className="font-bold text-center bg-white px-1 border-b border-r border-t border-gray-700">
             Підпис працівника
           </div>
-          {/* line */}
-          <div className="pl-2 bg-white py-0.5 border-b border-r border-l border-gray-700">
-            01.03.2006
-          </div>
-          <div className="pl-2 text-center bg-white py-0.5 border-b border-r border-gray-700"></div>
-          <div className="text-center bg-white py-0.5 border-b border-r border-gray-700">
-            2006-2009
-          </div>
-          <div className="pl-2 bg-white py-0.5 border-b border-r border-gray-700"></div>
-          <div className="pl-2 text-center bg-white py-0.5 border-b border-r border-gray-700"></div>
-          <div className="text-center bg-white py-0.5 border-b border-r border-gray-700"></div>
-          <div className="text-center bg-white py-0.5 border-b border-r border-gray-700"></div>
         </div>
+        {/* line */}
+        {Array.isArray(lastEmployee.assignmentAndTransfer) &&
+          lastEmployee.assignmentAndTransfer.map((el, index) => (
+            <div
+              key={index}
+              className=" bg-gray-100 grid grid-cols-[10%_1fr_10%_10%_10%_17%_13%] gap-y-0.5 mb-0.5"
+            >
+              <div className="pl-2 text-center bg-white py-0.5 border-b border-r border-t border-l border-gray-700">
+                {el.dateOfstudy}
+              </div>
+              <div className="pl-2 text-center bg-white py-0.5 border-b border-r border-t border-gray-700">
+                {el.nameStructuralUnit}
+              </div>
+              <div className="pl-2 text-center bg-white py-0.5 border-b border-r border-t border-gray-700">
+                {el.professionName}
+              </div>
+
+              <div className="pl-2 text-center bg-white py-0.5 border-b border-r border-t border-gray-700">
+                {el.codeForCP}
+              </div>
+              <div className="pl-2 text-center bg-white py-0.5 border-b border-r border-t border-gray-700">
+                {el.salary}
+              </div>
+              <div className="pl-2 text-center bg-white py-0.5 border-b border-r border-t border-gray-700">
+                {el.groundOrder}
+              </div>
+              <div className="pl-2 text-center bg-white py-0.5 border-b border-r border-t border-gray-700">
+                {el.employeeSignatur}
+              </div>
+            </div>
+          ))}
         <p className="text-[11px]">
           * Відповідно до Класифікатора професій ДК 003-2005, затвердженого
           наказом Держстандарту України від 26.12.2005 N 375, з урахуванням

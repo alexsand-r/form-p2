@@ -97,4 +97,36 @@ export const initialValues = {
       documentCertifyingProfessional: "", // Назва документа, що посвідчує професійну освіту, ким виданий
     },
   ],
+  // IV. ПРИЗНАЧЕННЯ І ПЕРЕВЕДЕННЯ
+  assignmentAndTransfer: [
+    {
+      dateOfstudy: "", // дата окончания обучения
+      nameStructuralUnit: "", // Назва структурного підрозділу
+      professionName: "", // професія назва
+      codeForCP: "", // код за КП
+      salary: "", // Розряд (оклад)
+      groundOrder: "", //Підстава, наказ N
+      employeeSignatur: "", //Підпис працівника
+    },
+  ],
+
+  //V. ВІДПУСТКИ VACATIONS
+  vacations: [
+    {
+      typeOfVacation: "", // Вид відпустки
+      forWhatPeriodStart: "", // За який період с
+      forWhatPeriodEnd: "", // За який період по
+      vacationStartDate: "", // Дата початку відпустки
+      vacationEndDate: "", //  Дата закінчення відпустки
+      groundOrder: "", //Підстава, наказ N
+    },
+  ],
+
+  // Додаткові відомості
+  additionalInformation: "", // Додаткові відомості
+  releaseDateDay: "", // Дата звільнення
+  reasonForDismissalDay: "", // причина звільнення
+  position: "", // посада
+  lastNameMiddleName: "", //  Прізвище, ім'я по батькові
+  dataDocument: "", // дата документу
 };

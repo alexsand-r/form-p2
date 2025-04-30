@@ -66,3 +66,19 @@ padding: 0 15px;
 
 👉 <div className="w-full h-0.5 bg-[var(--main-color-line)] mt-[14px]"></div> // так в компоненте 🚀
 👉 bg-[var(--main-bg-color)]
+
+---
+
+## ⚠️ ПРОБЛЕМА ПРИ РЕДАКТИРОВАНИИ НЕ ОТРАЖАЛИСЬ ДАННЫЕ В ФОРМЕ
+
+✅ Решение
+
+1. Используй динамическое начальное значение формы:
+   <Formik
+   onSubmit={addEmployeeInList}
+   initialValues={itemToEdit || initialValues} // 💡
+   validationSchema={validationSchema}
+   enableReinitialize={true}
+   > ✅ Теперь initialValues будет обновляться, когда изменится itemToEdit, и Formik правильно "реинициализирует" форму.
+
+---

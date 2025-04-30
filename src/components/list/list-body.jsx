@@ -1,8 +1,12 @@
 //-- list-body
 import { useSelector } from "react-redux";
+import { selectEmployeeForView } from "../../store/slices/employeeSlice";
+import { useDispatch } from "react-redux";
 
-export const ListBody = () => {
+export const ListBody = ({ setItemToEdit }) => {
   const { employeeArr } = useSelector((state) => state.employee);
+  const dispatch = useDispatch();
+
   return (
     <>
       <div className="flex justify-between mb-5">
@@ -52,6 +56,7 @@ export const ListBody = () => {
             </div>
             <div className="font-bold text-center bg-white py-0.5 border-b border-r border-t border-gray-700">
               <button
+                onClick={() => dispatch(selectEmployeeForView(el))}
                 type="button"
                 className="cursor-pointer bg-green-500 px-1 text-white hover:bg-green-600 transition-bg duration-300"
               >
@@ -60,6 +65,11 @@ export const ListBody = () => {
             </div>
             <div className="font-bold text-center bg-white py-0.5 border-b border-r border-t border-gray-700">
               <button
+                onClick={() => {
+                  const editedItem = { ...el }; // ✅ коротко, копируем весь объект
+                  console.log("Передаём в editItem:", editedItem);
+                  setItemToEdit(editedItem);
+                }}
                 type="button"
                 className="cursor-pointer bg-amber-500 px-1 text-white hover:bg-amber-600 transition-bg duration-300"
               >

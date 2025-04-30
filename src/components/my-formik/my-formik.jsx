@@ -7,16 +7,20 @@ import { addEmployee, editEmployee } from "../../store/slices/employeeSlice";
 import { useEffect } from "react";
 import { initialValues } from "../initialValues";
 import { validationSchema } from "../validationSchema";
-import { EducationalInstitutions } from "./my-formik-el/educationalInstitutions";
-import { Profession } from "./my-formik-el/profession";
-import { GeneralInformation } from "./my-formik-el/general-information";
-import { PostGraduate } from "./my-formik-el/post-graduate-training";
-import { Point67Form } from "./my-formik-el/Point67Form";
-import { Point89Form } from "./my-formik-el/point89Form";
-import { Point10Form } from "./my-formik-el/point10Form";
-import { Point11a12Form } from "./my-formik-el/point11a12Form";
-import { ChapterIIForm } from "./my-formik-el/chapterIIForm";
-import { ChapterIIIForm } from "./my-formik-el/chapterIIIForm";
+import { GeneralInformationForm } from "./my-formik-el/general-information-form";
+import { TitleCompanyForm } from "./my-formik-el/title-company-form";
+// import { Point67Form } from "./my-formik-el/point67-form";
+// import { Point89Form } from "./my-formik-el/point89-form";
+// import { Point10Form } from "./my-formik-el/point10-form";
+// import { Point11a12Form } from "./my-formik-el/point11-a-12-form";
+// import { ChapterIIForm } from "./my-formik-el/chapterII-form";
+// import { ChapterIIIForm } from "./my-formik-el/chapterIII-form";
+// import { ChapterIVForm } from "./my-formik-el/chapterIV-form";
+//import { EducationalInstitutionsForm } from "./my-formik-el/educational-institutions-form";
+//import { ProfessionForm } from "./my-formik-el/profession-form";
+// import { PostGraduateForm } from "./my-formik-el/post-graduate-training-form";
+// import { ChapterVForm } from "./my-formik-el/chapterV-form";
+// import { EndForm } from "./my-formik-el/end-form";
 
 export const MyFormik = ({ itemToEdit, setItemToEdit }) => {
   const dispatch = useDispatch();
@@ -30,7 +34,7 @@ export const MyFormik = ({ itemToEdit, setItemToEdit }) => {
       console.log("Редактируем элемент:", formattedValues);
     } else {
       dispatch(addEmployee(formattedValues));
-      console.log("Добавлен новый элемент:", formattedValues);
+      console.log("Добавлен новый элемент- formattedValues-:", formattedValues);
     }
 
     resetForm();
@@ -46,38 +50,50 @@ export const MyFormik = ({ itemToEdit, setItemToEdit }) => {
       <h1 className="text-sm font-bold mb-3">Форма Т-2 (формик)</h1>
       <Formik
         onSubmit={addEmployeeInList}
-        initialValues={initialValues}
+        initialValues={itemToEdit || initialValues}
         validationSchema={validationSchema}
-        enableReinitialize
+        enableReinitialize={true} // ⬅️ ЭТО ДОБАВЬ что заполнить поля формы редактированным объектом
       >
         <Form className="px-2 bg-[var(--main-bg-color)] text-sm py-2 mb-4 shadow-md">
+          {/* шапка формы: название предприятия и код едрпоу */}
+          <TitleCompanyForm />
+
           {/* I ЗАГАЛЬНІ ВІДОМОСТІ  general information */}
-          <GeneralInformation />
+          <GeneralInformationForm />
 
           {/* Навчальні заклади  educationalInstitutions (навчальні заклади)*/}
-          <EducationalInstitutions />
+          {/* <EducationalInstitutionsForm /> */}
 
           {/* Спеціальність / професія -- profession */}
-          <Profession />
+          {/* <ProfessionForm /> */}
           {/* post-graduate training (після дипломна підготовка) */}
-          <PostGraduate />
+          {/* <PostGraduateForm /> */}
 
           {/* 6. Останнє місце роботи 7. Стаж роботи */}
-          <Point67Form />
+          {/* <Point67Form /> */}
           {/* 8. Останнє місце роботи 9. Стаж роботи */}
-          <Point89Form />
+          {/* <Point89Form /> */}
 
           {/* 10. Родинний стан */}
-          <Point10Form />
+          {/* <Point10Form /> */}
           {/* 11 - 12. паспортни данни */}
-          <Point11a12Form />
+          {/* <Point11a12Form /> */}
 
           {/* ІІ. ВІДОМОСТІ ПРО ВІЙСЬКОВИЙ ОБЛІК */}
-          <ChapterIIForm />
+          {/* <ChapterIIForm /> */}
 
           {/* ІІІ. ПРОФЕСІЙНА ОСВІТА НА ВИРОБНИЦТВІ (ЗА РАХУНОК ПІДПРИЄМСТВА-РОБОТОДАВЦЯ) */}
-          <ChapterIIIForm />
-          <Button />
+          {/* <ChapterIIIForm /> */}
+
+          {/* ІV. ПРОФЕСІЙНА ОСВІТА НА ВИРОБНИЦТВІ (ЗА РАХУНОК ПІДПРИЄМСТВА-РОБОТОДАВЦЯ) */}
+          {/* <ChapterIVForm /> */}
+
+          {/* V. ВІДПУСТКИ */}
+          {/* <ChapterVForm /> */}
+
+          {/* <EndForm /> */}
+
+          <Button itemToEdit={itemToEdit} />
         </Form>
       </Formik>
     </>

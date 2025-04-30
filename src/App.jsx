@@ -8,9 +8,9 @@ function App() {
   const [itemToEdit, setItemToEdit] = useState(null); // состояние для редактируемого объекта
   return (
     <>
-      <ListBody />
+      <ListBody setItemToEdit={setItemToEdit} />
       <MyFormik itemToEdit={itemToEdit} setItemToEdit={setItemToEdit} />
-      <ItemCard setItemToEdit={setItemToEdit} />
+      <ItemCard />
     </>
   );
 }

@@ -3,16 +3,17 @@
 import { Header } from "../../components/employee-item/header";
 import { Title } from "../../components/employee-item/title";
 import { Point1234 } from "../../components/employee-item/point1234";
-import { Education } from "../../components/employee-item/education";
-import { Point5 } from "../../components/employee-item/point5";
-import { Point67 } from "../../components/employee-item/point67";
-import { Point89 } from "../../components/employee-item/point89";
-import { Point10 } from "../../components/employee-item/point10";
-import { Point11a12 } from "../../components/employee-item/point11a12";
-import { ChapterII } from "../../components/employee-item/chapterII";
-import { ChapterIII } from "../../components/employee-item/chapterIII";
-import { ChapterIV } from "../../components/employee-item/chapterIV";
+// import { Education } from "../../components/employee-item/education";
+// import { Point5 } from "../../components/employee-item/point5";
+// import { Point67 } from "../../components/employee-item/point67";
+// import { Point89 } from "../../components/employee-item/point89";
+// import { Point10 } from "../../components/employee-item/point10";
+// import { Point11a12 } from "../../components/employee-item/point11a12";
+// import { ChapterII } from "../../components/employee-item/chapterII";
+// import { ChapterIII } from "../../components/employee-item/chapterIII";
+// import { ChapterIV } from "../../components/employee-item/chapterIV";
 // import { ChapterV } from "../../components/employee-item/chapterV";
+// import { ChapterEnd } from "./chapter-end";
 
 export const ItemCard = () => {
   return (
@@ -21,7 +22,7 @@ export const ItemCard = () => {
         <Header />
         <Title />
         <Point1234 />
-        <Education />
+        {/* <Education />
         <Point5 />
         <Point67 />
         <Point89 />
@@ -30,7 +31,8 @@ export const ItemCard = () => {
         <ChapterII />
         <ChapterIII />
         <ChapterIV />
-        {/* <ChapterV /> */}
+        <ChapterV />
+        <ChapterEnd /> */}
       </div>
     </>
   );

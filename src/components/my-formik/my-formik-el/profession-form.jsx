@@ -1,27 +1,34 @@
-//---educationalInstitutions (навчальні заклади)
+//--profession (Спеціальність / професія)
+
 import { FieldArray } from "formik";
 import plus from "../../../../public/plus.svg";
 import minus from "../../../../public/minus.svg";
-import { Input } from "../my-formik-el/input";
-import { MyAirDatepicker } from "../../my-air-datepicker";
+import { Input } from "./input";
+import { SelectField } from "../../customStylesSelect/selectField";
+import {
+  customStyles,
+  formOfStudy,
+} from "../../customStylesSelect/customStyles";
+import { SelectField2 } from "../../customStylesSelect/selectField2";
 
-export const EducationalInstitutions = () => {
+export const ProfessionForm = () => {
   return (
     <>
-      {/* Навчальні заклади */}
-      <h2 className="text-lg text-center mt-4">5. Навчальні заклади</h2>
-      <FieldArray name="educationalInstitutions">
+      <h2 className="text-lg text-center mt-4">
+        Спеціальність (професія) за дипломом
+      </h2>
+      <FieldArray name="profession">
         {({ push, remove, form }) => (
           <>
-            {form.values.educationalInstitutions.map((_, index) => (
+            {form.values.profession.map((_, index) => (
               <div
                 key={index}
                 className="grid grid-cols-[50%_30%_19%] gap-1 gap-x-1 mb-2"
               >
                 <div className="relative">
                   <Input
-                    label="Назва закладу:"
-                    name={`educationalInstitutions[${index}].name`}
+                    label="Професія:"
+                    name={`profession[${index}].profes`}
                     placeholder="..."
                   />
                   {index > 0 && (
@@ -41,15 +48,16 @@ export const EducationalInstitutions = () => {
                 </div>
 
                 <Input
-                  label="Диплом серія, номер"
-                  name={`educationalInstitutions[${index}].documentNumber`}
+                  label="Кваліфікація:"
+                  name={`profession[${index}].qualification`}
                   placeholder="..."
                 />
-                <MyAirDatepicker
-                  label="Рік закінчення"
-                  name={`educationalInstitutions[${index}].graduationYear`}
+                <SelectField2
+                  label="Форма навчання"
+                  name={`profession[${index}].formOfStudy`}
+                  options={formOfStudy}
+                  styles={customStyles}
                   placeholder="..."
-                  format="yyyy"
                 />
               </div>
             ))}

@@ -3,10 +3,10 @@
 import { FieldArray } from "formik";
 import plus from "../../../../public/plus.svg";
 import minus from "../../../../public/minus.svg";
-import { Input } from "../my-formik-el/input";
+import { Input } from "./input";
 import { MyAirDatepicker } from "../../my-air-datepicker";
 
-export const PostGraduate = () => {
+export const PostGraduateForm = () => {
   return (
     <>
       <h2 className="text-lg text-center mt-4">
