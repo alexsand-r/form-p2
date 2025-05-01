@@ -1,0 +1,268 @@
+[
+  {
+   "nameOfEnterprise": "ТОВ 'ТОВ 'Усе буде добре'",
+    "edrpoy": "12345678",
+    "dateOfCompletion": "2025-03-01",
+    "personnelNumber": "001",
+    "individualIdentificationNumber": "3501234567",
+    "sex": "Чоловіча",
+    "typeOfWork": "Основна",
+    "photoOfWorker": "",
+    "name": "Іваненко",
+    "firstName": "Іван",
+    "lastName": "Іванович",
+    "dateOfBirth": "1985-05-12",
+    "education": "Вища",
+    "citizenship": "Україна",
+    "educationalInstitutions": [
+      {
+        "name": "Київський національний університет",
+        "documentNumber": "AB123456",
+        "graduationYear": "2008"
+      }
+    ],
+    "profession": [
+      {
+        "profes": "Інженер",
+        "qualification": "Магістр",
+        "formOfStudy": "Денна"
+      }
+    ],
+    "graduateSchool": "Так",
+    "adjunct": "",
+    "doctoralStudies": "",
+    "postgraduateProfessional": [
+      {
+        "name": "Курс підвищення кваліфікації",
+        "documentNumber": "PK-2020-001",
+        "graduationYear": "2020",
+        "academicBegree": "Кандидат техн. наук"
+      }
+    ],
+    "lastPlaceOfWork": "ТОВ 'БудСервіс'",
+    "positionProfession": "Головний інженер",
+    "workExperience": "2025-01-01",
+    "genaralDay": "15",
+    "genaralMounth": "6",
+    "genaralYears": "12",
+    "serviceDays": "10",
+    "monthsOfService": "3",
+    "yearsOfService": "5",
+    "releaseDate": "",
+    "reasonForDismissal": "",
+    "informationAboutReceivingPension": "Ні",
+    "maritalStatus": "Одружений",
+    "familyComposition": [
+      {
+        "degreeOfFamilyRelationship": "Дружина",
+        "fullName": "Іваненко Марина",
+        "yearOfBirth": "1986"
+      }
+    ],
+    "actualPlaceOfResidence": "м. Київ, вул. Перемоги, 15",
+    "placeOfResidenceRegistration": "м. Київ, вул. Перемоги, 15",
+    "passportSeries": "КА",
+    "passportNumber": "123456",
+    "byWhomIssued": "Солом’янський РВ УМВС",
+    "dateOfIssue": "2005-08-12",
+    "accountingGroup": "Основна",
+    "eligibilityMilitary": "Придатний",
+    "categoriaGroup": "Офіцер",
+    "nameOfDistrictMilitary": "Солом’янський військкомат",
+    "composition": "Резерв",
+    "nameDistrictActual": "Солом’янський військкомат",
+    "militaryRank": "Старший лейтенант",
+    "stayingSpecialRegistration": "Ні",
+    "militaryAccountingSpecialty": "112",
+    "onTheJob": [
+      {
+        "dateOfstudy": "2023-11-01",
+        "nameStructuralUnit": "Технічний відділ",
+        "trainingPeriodWith": "2023-01-01",
+        "trainingPeriod": "2023-11-01",
+        "typeOfTraining": "Внутрішнє",
+        "formOfStudy": "Очна",
+        "documentCertifyingProfessional": "Сертифікат ТОВ 'ЕнергоПром'"
+      }
+    ],
+    "assignmentAndTransfer": [
+      {
+        "dateOfstudy": "2024-01-01",
+        "nameStructuralUnit": "Проектний відділ",
+        "professionName": "Інженер-проектувальник",
+        "codeForCP": "2141",
+        "salary": "15000",
+        "groundOrder": "Наказ №12",
+        "employeeSignatur": "Іваненко І.І."
+      }
+    ],
+    "vacations": [
+      {
+        "typeOfVacation": "Щорічна основна",
+        "forWhatPeriodStart": "2024-01-01",
+        "forWhatPeriodEnd": "2024-12-31",
+        "vacationStartDate": "2024-07-01",
+        "vacationEndDate": "2024-07-14",
+        "groundOrder": "Наказ №34"
+      }
+    ],
+    "additionalInformation": "Працює дистанційно",
+    "releaseDateDay": "",
+    "reasonForDismissalDay": "",
+    "position": "Інженер",
+    "lastNameMiddleName": "Іваненко Іван Іванович",
+    "dataDocument": "2025-03-01"
+  },
+
+  {
+    "nameOfEnterprise": "ТОВ 'ТОВ 'Усе буде добре'",
+    "edrpoy": "12345678",
+    "dateOfCompletion": "2025-03-15",
+    "personnelNumber": "002",
+    "individualIdentificationNumber": "3509876543",
+    "sex": "Жіноча",
+    "typeOfWork": "Сумісництво",
+    "photoOfWorker": "",
+    "name": "Петренко",
+    "firstName": "Олена",
+    "lastName": "Вікторівна",
+    "dateOfBirth": "1990-09-22",
+    "education": "Середня спеціальна",
+    "citizenship": "Україна",
+    "educationalInstitutions": [
+      {
+        "name": "Коледж технологій та дизайну",
+        "documentNumber": "CD987654",
+        "graduationYear": "2010"
+      }
+    ],
+    "profession": [
+      {
+        "profes": "Дизайнер",
+        "qualification": "Спеціаліст",
+        "formOfStudy": "Заочна"
+      }
+    ],
+    "graduateSchool": "",
+    "adjunct": "",
+    "doctoralStudies": "",
+    "postgraduateProfessional": [],
+    "lastPlaceOfWork": "ТОВ 'Дизайн-Про'",
+    "positionProfession": "Дизайнер інтер'єру",
+    "workExperience": "2025-02-01",
+    "genaralDay": "20",
+    "genaralMounth": "9",
+    "genaralYears": "8",
+    "serviceDays": "15",
+    "monthsOfService": "7",
+    "yearsOfService": "3",
+    "releaseDate": "",
+    "reasonForDismissal": "",
+    "informationAboutReceivingPension": "Ні",
+    "maritalStatus": "Не одружена",
+    "familyComposition": [],
+    "actualPlaceOfResidence": "м. Львів, вул. Зелена, 45",
+    "placeOfResidenceRegistration": "м. Львів, вул. Зелена, 45",
+    "passportSeries": "ЛВ",
+    "passportNumber": "654321",
+    "byWhomIssued": "Галицький РВ УМВС",
+    "dateOfIssue": "2008-03-15",
+    "accountingGroup": "Запас",
+    "eligibilityMilitary": "Непридатна",
+    "categoriaGroup": "Не належить",
+    "nameOfDistrictMilitary": "Галицький військкомат",
+    "composition": "Цивільна",
+    "nameDistrictActual": "Галицький військкомат",
+    "militaryRank": "",
+    "stayingSpecialRegistration": "Ні",
+    "militaryAccountingSpecialty": "",
+    "onTheJob": [],
+    "assignmentAndTransfer": [],
+    "vacations": [],
+    "additionalInformation": "Працює на 0.5 ставки",
+    "releaseDateDay": "",
+    "reasonForDismissalDay": "",
+    "position": "Дизайнер",
+    "lastNameMiddleName": "Петренко Олена Вікторівна",
+    "dataDocument": "2025-03-15"
+  },
+
+  {
+    "nameOfEnterprise": "ТОВ 'Усе буде добре'",
+    "edrpoy": "12345678",
+    "dateOfCompletion": "2025-03-20",
+    "personnelNumber": "003",
+    "individualIdentificationNumber": "3511122333",
+    "sex": "Чоловіча",
+    "typeOfWork": "Основна",
+    "photoOfWorker": "",
+    "name": "Сидорчук",
+    "firstName": "Андрій",
+    "lastName": "Петрович",
+    "dateOfBirth": "1975-12-10",
+    "education": "Професійно-технічна",
+    "citizenship": "Україна",
+    "educationalInstitutions": [
+      {
+        "name": "ПТУ №3",
+        "documentNumber": "PTU45321",
+        "graduationYear": "1993"
+      }
+    ],
+    "profession": [
+      {
+        "profes": "Слюсар",
+        "qualification": "Кваліфікований робітник",
+        "formOfStudy": "Денна"
+      }
+    ],
+    "graduateSchool": "",
+    "adjunct": "",
+    "doctoralStudies": "",
+    "postgraduateProfessional": [],
+    "lastPlaceOfWork": "Приватне СТО",
+    "positionProfession": "Слюсар-ремонтник",
+    "workExperience": "2025-01-15",
+    "genaralDay": "5",
+    "genaralMounth": "4",
+    "genaralYears": "30",
+    "serviceDays": "0",
+    "monthsOfService": "2",
+    "yearsOfService": "10",
+    "releaseDate": "",
+    "reasonForDismissal": "",
+    "informationAboutReceivingPension": "Так",
+    "maritalStatus": "Одружений",
+    "familyComposition": [
+      {
+        "degreeOfFamilyRelationship": "Син",
+        "fullName": "Сидорчук Максим",
+        "yearOfBirth": "2002"
+      }
+    ],
+    "actualPlaceOfResidence": "м. Полтава, вул. Шевченка, 10",
+    "placeOfResidenceRegistration": "м. Полтава, вул. Шевченка, 10",
+    "passportSeries": "ПТ",
+    "passportNumber": "987123",
+    "byWhomIssued": "Київський РВ УМВС",
+    "dateOfIssue": "1996-05-20",
+    "accountingGroup": "Основна",
+    "eligibilityMilitary": "Придатний",
+    "categoriaGroup": "Сержант",
+    "nameOfDistrictMilitary": "Київський військкомат",
+    "composition": "Резерв",
+    "nameDistrictActual": "Київський військкомат",
+    "militaryRank": "Сержант",
+    "stayingSpecialRegistration": "Так",
+    "militaryAccountingSpecialty": "321",
+    "onTheJob": [],
+    "assignmentAndTransfer": [],
+    "vacations": [],
+    "additionalInformation": "На пенсії, працює за контрактом",
+    "releaseDateDay": "",
+    "reasonForDismissalDay": "",
+    "position": "Слюсар",
+    "lastNameMiddleName": "Сидорчук Андрій Петрович",
+    "dataDocument": "2025-03-20"
+  }
+]

@@ -1,9 +1,9 @@
 //-- point11a12Form.jsx
-
+import React from "react";
 import { Input } from "./input";
 import { MyAirDatepicker } from "../../my-air-datepicker";
 
-export const Point11a12Form = () => {
+export const Point11a12Form = React.memo(() => {
   return (
     <>
       <p>
@@ -41,4 +41,4 @@ export const Point11a12Form = () => {
       </div>
     </>
   );
-};
+});

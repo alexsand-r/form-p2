@@ -2,14 +2,12 @@
 import { useSelector } from "react-redux";
 
 export const Point89 = () => {
-  const { employeeArr } = useSelector((state) => state.employee);
-  //console.log("вывожу в тайтле", employeeArr);
+  //const { employeeArr } = useSelector((state) => state.employee); //👉 рендерю массив
+  const { selectedEmployee } = useSelector((state) => state.employee); //👉 рендерю отдельный елемент
 
-  const lastEmployee = employeeArr[employeeArr.length - 1] || {}; // чтобы не было ошибки если массив пуст
-
-  // useEffect(() => {
-  //   console.log("вывожу в стаж роботи: - ", lastEmployee);
-  // }, [lastEmployee]);
+  //console.log("вывожу в хедере", employeeArr);
+  //const employeeItem = employeeArr[employeeArr.length - 1] || {}; // чтобы не было ошибки если массив пуст
+  const employeeItem = selectedEmployee || {}; // пустой объект, если нет выбранного
   return (
     <>
       <div className="px-2 bg-[var(--main-bg-color)] text-sm pt-2">
@@ -17,12 +15,12 @@ export const Point89 = () => {
           8. Дата та причина звільнення (скорочення штатів; за власним бажанням,
           за прогул та інші порушення, невідповідність займаній посаді тощо)
           <span className="w-[250px] bg-white block border-b border-b-gray-700 pl-4 text-base font-semibold text-center self-end">
-            {lastEmployee.releaseDate}
+            {employeeItem.releaseDate}
           </span>
         </p>
         <div>
           <span className="w-[780px] bg-white block border-b border-b-gray-700 pl-4 text-base font-semibold">
-            {lastEmployee.reasonForDismissal}
+            {employeeItem.reasonForDismissal}
           </span>
         </div>
         <p className=" flex gap-2">
@@ -31,7 +29,7 @@ export const Point89 = () => {
         </p>
         <div>
           <span className="w-[780px] bg-white block border-b border-b-gray-700 pl-4 text-base font-semibold">
-            {lastEmployee.informationAboutReceivingPension}
+            {employeeItem.informationAboutReceivingPension}
           </span>
         </div>
       </div>

@@ -1,7 +1,7 @@
 //-- header
 import { useSelector } from "react-redux";
 
-export const Header = () => {
+export const TitleCompany = () => {
   //const { employeeArr } = useSelector((state) => state.employee); //👉 рендерю массив
   const { selectedEmployee } = useSelector((state) => state.employee); //👉 рендерю отдельный елемент
 

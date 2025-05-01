@@ -1,13 +1,13 @@
 //--chapter-end
 import { useSelector } from "react-redux";
 
-export const ChapterEnd = () => {
-  const { employeeArr } = useSelector((state) => state.employee);
-  //console.log("вывожу в Education", employeeArr);
+export const End = () => {
+  //const { employeeArr } = useSelector((state) => state.employee); //👉 рендерю массив
+  const { selectedEmployee } = useSelector((state) => state.employee); //👉 рендерю отдельный елемент
 
-  const lastEmployee = employeeArr[employeeArr.length - 1] || {}; // чтобы не было ошибки если массив пуст
-  // console.log("учебное заведение- ", lastEmployee.educationalInstitutions);
-  // console.log("профессия-", lastEmployee.profession);
+  //console.log("вывожу в хедере", employeeArr);
+  //const employeeItem = employeeArr[employeeArr.length - 1] || {}; // чтобы не было ошибки если массив пуст
+  const employeeItem = selectedEmployee || {}; // пустой объект, если нет выбранного
   return (
     <>
       <div className="px-2 bg-[var(--main-bg-color)] text-sm pt-2 pb-5">
@@ -15,7 +15,7 @@ export const ChapterEnd = () => {
         <div>
           <p className=" flex gap-2 items-end">Додаткові відомості</p>
           <span className="w-full bg-white block border-b border-b-gray-700 pl-4 text-base font-semibold text-left self-end">
-            {lastEmployee.additionalInformation}
+            {employeeItem.additionalInformation}
           </span>
         </div>
         <div className="flex gap-3">
@@ -23,10 +23,10 @@ export const ChapterEnd = () => {
             Дата і причина звільнення (підстава)
           </p>
           <span className="w-full bg-white block border-b border-b-gray-700 pl-4 text-base font-semibold text-left self-end">
-            {lastEmployee.releaseDateDay}
+            {employeeItem.releaseDateDay}
           </span>
           <span className="w-full bg-white block border-b border-b-gray-700 pl-4 text-base font-semibold text-left self-end">
-            {lastEmployee.reasonForDismissalDay}
+            {employeeItem.reasonForDismissalDay}
           </span>
         </div>
         <div className="flex gap-3">
@@ -35,11 +35,11 @@ export const ChapterEnd = () => {
           </p>
           <div className="flex items-center gap-x-3">
             <span className="bg-white block border-b border-b-gray-700 pl-4 text-base text-center font-semibold self-end w-full">
-              {lastEmployee.position}
+              {employeeItem.position}
             </span>
             <span className="bg-white block border-b border-b-gray-700 pl-4 text-base text-center font-semibold self-end w-[300px]"></span>
             <span className="bg-white block border-b border-b-gray-700 pl-4 text-base text-center font-semibold self-end w-full">
-              {lastEmployee.lastNameMiddleName}
+              {employeeItem.lastNameMiddleName}
             </span>
           </div>
         </div>
@@ -48,7 +48,7 @@ export const ChapterEnd = () => {
           <div className="flex items-center gap-x-3">
             <span className="bg-white block border-b border-b-gray-700 pl-4 text-base text-center font-semibold self-end w-[300px]"></span>
             <span className="bg-white block border-b border-b-gray-700 pl-4 text-base text-center font-semibold self-end w-full">
-              {lastEmployee.dataDocument}
+              {employeeItem.dataDocument}
             </span>
           </div>
         </div>

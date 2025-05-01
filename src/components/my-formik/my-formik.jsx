@@ -9,18 +9,18 @@ import { initialValues } from "../initialValues";
 import { validationSchema } from "../validationSchema";
 import { GeneralInformationForm } from "./my-formik-el/general-information-form";
 import { TitleCompanyForm } from "./my-formik-el/title-company-form";
-// import { Point67Form } from "./my-formik-el/point67-form";
-// import { Point89Form } from "./my-formik-el/point89-form";
-// import { Point10Form } from "./my-formik-el/point10-form";
-// import { Point11a12Form } from "./my-formik-el/point11-a-12-form";
-// import { ChapterIIForm } from "./my-formik-el/chapterII-form";
-// import { ChapterIIIForm } from "./my-formik-el/chapterIII-form";
-// import { ChapterIVForm } from "./my-formik-el/chapterIV-form";
-//import { EducationalInstitutionsForm } from "./my-formik-el/educational-institutions-form";
-//import { ProfessionForm } from "./my-formik-el/profession-form";
-// import { PostGraduateForm } from "./my-formik-el/post-graduate-training-form";
-// import { ChapterVForm } from "./my-formik-el/chapterV-form";
-// import { EndForm } from "./my-formik-el/end-form";
+import { Point67Form } from "./my-formik-el/point67-form";
+import { Point89Form } from "./my-formik-el/point89-form";
+import { Point10Form } from "./my-formik-el/point10-form";
+import { Point11a12Form } from "./my-formik-el/point11-a-12-form";
+import { ChapterIIForm } from "./my-formik-el/chapterII-form";
+import { ChapterIIIForm } from "./my-formik-el/chapterIII-form";
+import { ChapterIVForm } from "./my-formik-el/chapterIV-form";
+import { EducationalInstitutionsForm } from "./my-formik-el/educational-institutions-form";
+import { ProfessionForm } from "./my-formik-el/profession-form";
+import { PostGraduateForm } from "./my-formik-el/post-graduate-training-form";
+import { ChapterVForm } from "./my-formik-el/chapterV-form";
+import { EndForm } from "./my-formik-el/end-form";
 
 export const MyFormik = ({ itemToEdit, setItemToEdit }) => {
   const dispatch = useDispatch();
@@ -62,36 +62,40 @@ export const MyFormik = ({ itemToEdit, setItemToEdit }) => {
           <GeneralInformationForm />
 
           {/* Навчальні заклади  educationalInstitutions (навчальні заклади)*/}
-          {/* <EducationalInstitutionsForm /> */}
+          <EducationalInstitutionsForm />
 
           {/* Спеціальність / професія -- profession */}
-          {/* <ProfessionForm /> */}
+          <ProfessionForm />
+
           {/* post-graduate training (після дипломна підготовка) */}
-          {/* <PostGraduateForm /> */}
+          <PostGraduateForm />
 
           {/* 6. Останнє місце роботи 7. Стаж роботи */}
-          {/* <Point67Form /> */}
-          {/* 8. Останнє місце роботи 9. Стаж роботи */}
-          {/* <Point89Form /> */}
+          <Point67Form />
+
+          {/* 8. Дата звільнення  9. Причини звільнення  */}
+          <Point89Form />
 
           {/* 10. Родинний стан */}
-          {/* <Point10Form /> */}
+          <Point10Form />
+
           {/* 11 - 12. паспортни данни */}
-          {/* <Point11a12Form /> */}
+          <Point11a12Form />
 
           {/* ІІ. ВІДОМОСТІ ПРО ВІЙСЬКОВИЙ ОБЛІК */}
-          {/* <ChapterIIForm /> */}
+          <ChapterIIForm />
 
           {/* ІІІ. ПРОФЕСІЙНА ОСВІТА НА ВИРОБНИЦТВІ (ЗА РАХУНОК ПІДПРИЄМСТВА-РОБОТОДАВЦЯ) */}
-          {/* <ChapterIIIForm /> */}
+          <ChapterIIIForm />
 
           {/* ІV. ПРОФЕСІЙНА ОСВІТА НА ВИРОБНИЦТВІ (ЗА РАХУНОК ПІДПРИЄМСТВА-РОБОТОДАВЦЯ) */}
-          {/* <ChapterIVForm /> */}
+          <ChapterIVForm />
 
           {/* V. ВІДПУСТКИ */}
-          {/* <ChapterVForm /> */}
+          <ChapterVForm />
 
-          {/* <EndForm /> */}
+          {/* Додаткові відомості */}
+          <EndForm />
 
           <Button itemToEdit={itemToEdit} />
         </Form>

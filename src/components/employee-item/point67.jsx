@@ -2,14 +2,12 @@
 import { useSelector } from "react-redux";
 
 export const Point67 = () => {
-  const { employeeArr } = useSelector((state) => state.employee);
-  //console.log("вывожу в тайтле", employeeArr);
+  //const { employeeArr } = useSelector((state) => state.employee); //👉 рендерю массив
+  const { selectedEmployee } = useSelector((state) => state.employee); //👉 рендерю отдельный елемент
 
-  const lastEmployee = employeeArr[employeeArr.length - 1] || {}; // чтобы не было ошибки если массив пуст
-
-  // useEffect(() => {
-  //   console.log("вывожу в стаж роботи: - ", lastEmployee);
-  // }, [lastEmployee]);
+  //console.log("вывожу в хедере", employeeArr);
+  //const employeeItem = employeeArr[employeeArr.length - 1] || {}; // чтобы не было ошибки если массив пуст
+  const employeeItem = selectedEmployee || {}; // пустой объект, если нет выбранного
 
   return (
     <>
@@ -17,29 +15,29 @@ export const Point67 = () => {
         <p className="flex items-end">
           6. Останнє місце роботи
           <span className="w-[200px] bg-white block border-b border-b-gray-700 pl-4 text-base font-semibold">
-            {lastEmployee.lastPlaceOfWork}
+            {employeeItem.lastPlaceOfWork}
           </span>
           посада (професія)
           <span className="w-[200px] bg-white block border-b border-b-gray-700 pl-4 text-base font-semibold">
-            {lastEmployee.positionProfession}
+            {employeeItem.positionProfession}
           </span>{" "}
         </p>
         <p className="flex items-end">
           7. Стаж роботи станом на
           <span className="w-[250px] bg-white block border-b border-b-gray-700 pl-4 text-base font-semibold">
-            {lastEmployee.workExperience}
+            {employeeItem.workExperience}
           </span>
           Загальний
           <span className="w-[50px] bg-white block border-b border-b-gray-700 pl-4 text-base font-semibold">
-            {lastEmployee.genaralDay}
+            {employeeItem.genaralDay}
           </span>{" "}
           днів
           <span className="w-[50px] bg-white block border-b border-b-gray-700 pl-4 text-base font-semibold">
-            {lastEmployee.genaralMounth}
+            {employeeItem.genaralMounth}
           </span>{" "}
           місяців
           <span className="w-[50px] bg-white block border-b border-b-gray-700 pl-4 text-base font-semibold">
-            {lastEmployee.genaralYears}
+            {employeeItem.genaralYears}
           </span>{" "}
           років,
         </p>
@@ -47,15 +45,15 @@ export const Point67 = () => {
           <p className="flex items-end">
             що дає право на надбавку за вислугу років
             <span className="w-[50px] bg-white block border-b border-b-gray-700 pl-4 text-base font-semibold">
-              {lastEmployee.serviceDays}
+              {employeeItem.serviceDays}
             </span>{" "}
             днів
             <span className="w-[50px] bg-white block border-b border-b-gray-700 pl-4 text-base font-semibold">
-              {lastEmployee.monthsOfService}
+              {employeeItem.monthsOfService}
             </span>{" "}
             місяців
             <span className="w-[50px] bg-white block border-b border-b-gray-700 pl-4 text-base font-semibold">
-              {lastEmployee.yearsOfService}
+              {employeeItem.yearsOfService}
             </span>{" "}
             років.
           </p>

@@ -1,10 +1,10 @@
 //-- Point67 (пункт 6-7)
 //
-
+import React from "react";
 import { Input } from "./input";
 import { MyAirDatepicker } from "../../my-air-datepicker";
 
-export const Point89Form = () => {
+export const Point89Form = React.memo(() => {
   return (
     <>
       <h2 className="text-lg text-center">Дата та причина звільнення</h2>
@@ -43,4 +43,4 @@ export const Point89Form = () => {
       <div className="w-full h-0.5 bg-[var(--main-color-line)] mt-[14px]"></div>
     </>
   );
-};
+});

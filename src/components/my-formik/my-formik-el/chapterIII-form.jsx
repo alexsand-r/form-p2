@@ -1,4 +1,5 @@
 //-- chapterIIIForm
+import React from "react";
 import { FieldArray } from "formik";
 import { Input } from "./input";
 import { MyAirDatepicker } from "../../my-air-datepicker";
@@ -10,7 +11,7 @@ import {
 import plus from "../../../../public/plus.svg";
 import minus from "../../../../public/minus.svg";
 
-export const ChapterIIIForm = () => {
+export const ChapterIIIForm = React.memo(() => {
   return (
     <>
       <div className="mt-3">
@@ -115,4 +116,4 @@ export const ChapterIIIForm = () => {
       </div>
     </>
   );
-};
+});

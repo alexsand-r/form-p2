@@ -1,12 +1,12 @@
 //-- point10
-
+import React from "react";
 import { Input } from "./input";
 import { MyAirDatepicker } from "../../my-air-datepicker";
 import { FieldArray } from "formik";
 import plus from "../../../../public/plus.svg";
 import minus from "../../../../public/minus.svg";
 
-export const Point10Form = () => {
+export const Point10Form = React.memo(() => {
   return (
     <>
       <h2 className="text-lg text-center">10. Родинний стан</h2>
@@ -81,4 +81,4 @@ export const Point10Form = () => {
       <div className="w-full h-0.5 bg-[var(--main-color-line)] mt-[14px]"></div>
     </>
   );
-};
+});

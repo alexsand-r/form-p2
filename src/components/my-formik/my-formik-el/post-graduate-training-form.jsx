@@ -1,12 +1,12 @@
 // -- post-graduate training (після дипломна підготовка)
-
+import React from "react";
 import { FieldArray } from "formik";
 import plus from "../../../../public/plus.svg";
 import minus from "../../../../public/minus.svg";
 import { Input } from "./input";
 import { MyAirDatepicker } from "../../my-air-datepicker";
 
-export const PostGraduateForm = () => {
+export const PostGraduateForm = React.memo(() => {
   return (
     <>
       <h2 className="text-lg text-center mt-4">
@@ -102,4 +102,4 @@ export const PostGraduateForm = () => {
       <div className="w-full h-0.5 bg-[var(--main-color-line)] mt-[14px]"></div>
     </>
   );
-};
+});

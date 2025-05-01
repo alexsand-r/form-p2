@@ -2,12 +2,12 @@
 import { useSelector } from "react-redux";
 
 export const ChapterIII = () => {
-  const { employeeArr } = useSelector((state) => state.employee);
-  //console.log("вывожу в Education", employeeArr);
+  //const { employeeArr } = useSelector((state) => state.employee); //👉 рендерю массив
+  const { selectedEmployee } = useSelector((state) => state.employee); //👉 рендерю отдельный елемент
 
-  const lastEmployee = employeeArr[employeeArr.length - 1] || {}; // чтобы не было ошибки если массив пуст
-  // console.log("учебное заведение- ", lastEmployee.educationalInstitutions);
-  // console.log("профессия-", lastEmployee.profession);
+  //console.log("вывожу в хедере", employeeArr);
+  //const employeeItem = employeeArr[employeeArr.length - 1] || {}; // чтобы не было ошибки если массив пуст
+  const employeeItem = selectedEmployee || {}; // пустой объект, если нет выбранного
   return (
     <>
       <div className="px-2 bg-[var(--main-bg-color)] text-sm pt-2">
@@ -41,8 +41,8 @@ export const ChapterIII = () => {
         </div>
 
         {/* тут мапить наверное */}
-        {Array.isArray(lastEmployee.onTheJob) &&
-          lastEmployee.onTheJob.map((job, index) => (
+        {Array.isArray(employeeItem.onTheJob) &&
+          employeeItem.onTheJob.map((job, index) => (
             <div
               key={index}
               className=" bg-gray-100 grid grid-cols-[10%_1fr_10%_15%_15%_1fr] gap-y-0.5 mb-0.5"

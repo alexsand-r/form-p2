@@ -1,11 +1,12 @@
 //---educationalInstitutions (навчальні заклади)
+import React from "react";
 import { FieldArray } from "formik";
 import plus from "../../../../public/plus.svg";
 import minus from "../../../../public/minus.svg";
 import { Input } from "./input";
 import { MyAirDatepicker } from "../../my-air-datepicker";
 
-export const EducationalInstitutionsForm = () => {
+export const EducationalInstitutionsForm = React.memo(() => {
   return (
     <>
       {/* Навчальні заклади */}
@@ -73,4 +74,4 @@ export const EducationalInstitutionsForm = () => {
       <div className="w-full h-0.5 bg-[var(--main-color-line)] mt-[14px]"></div>
     </>
   );
-};
+});

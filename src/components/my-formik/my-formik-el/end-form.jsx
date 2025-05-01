@@ -1,8 +1,9 @@
 // -- end-form
+import React from "react";
 import { Input } from "./input";
 import { MyAirDatepicker } from "../../my-air-datepicker";
 
-export const EndForm = () => {
+export const EndForm = React.memo(() => {
   return (
     <>
       <div className="mb-4">
@@ -42,4 +43,4 @@ export const EndForm = () => {
       </div>
     </>
   );
-};
+});

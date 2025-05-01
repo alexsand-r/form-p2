@@ -8,7 +8,7 @@
     employeeArr: [],
     selectedEmployee: null, // <--- 👉 добавлено ❗️
   },
-    selectEmployeeForView: (state, action) => {
+    selectEmployeeForView: (state, action) => {  // <--- 👉 добавлено ❗️
     state.selectedEmployee = action.payload;
     console.log("рендер для предпросмотра", action.payload);
 }, -->

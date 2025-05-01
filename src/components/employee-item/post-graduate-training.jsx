@@ -1,18 +1,15 @@
-//--five
+//--PostGraduate
 
 // -- іслядипломна професійна підготовка: навчання postgraduateProfessional
 import { useSelector } from "react-redux";
 
-export const Point5 = () => {
-  const { employeeArr } = useSelector((state) => state.employee);
-  // console.log("Післядипломна професійна підготовка", employeeArr);
+export const PostGraduate = () => {
+  //const { employeeArr } = useSelector((state) => state.employee); //👉 рендерю массив
+  const { selectedEmployee } = useSelector((state) => state.employee); //👉 рендерю отдельный елемент
 
-  const lastEmployee = employeeArr[employeeArr.length - 1] || {}; // чтобы не было ошибки если массив пуст
-  // console.log(
-  //   "Післядипломна професійна підготовка- ",
-  //   lastEmployee.educationalInstitutions
-  // );
-  // console.log("Післядипломна професійна підготовка-", lastEmployee.profession);
+  //console.log("вывожу в хедере", employeeArr);
+  //const employeeItem = employeeArr[employeeArr.length - 1] || {}; // чтобы не было ошибки если массив пуст
+  const employeeItem = selectedEmployee || {}; // пустой объект, если нет выбранного
   return (
     <>
       <div className="px-2 bg-[var(--main-bg-color)] text-sm">
@@ -22,15 +19,15 @@ export const Point5 = () => {
           </p>
           <div className="flex items-center gap-1">
             <span className="flex items-center justify-center h-3 w-3 border border-gray-800">
-              {lastEmployee.graduateSchool}
+              {employeeItem.graduateSchool}
             </span>
             в аспірантурі
             <span className="flex items-center justify-center h-3 w-3 border border-gray-800">
-              {lastEmployee.adjunct}
+              {employeeItem.adjunct}
             </span>
             ад'юнктурі
             <span className="flex items-center justify-center h-3 w-3 border border-gray-800">
-              {lastEmployee.doctoralStudies}
+              {employeeItem.doctoralStudies}
             </span>
             докторантурі (необхідне відмітити х)
           </div>
@@ -52,8 +49,8 @@ export const Point5 = () => {
         </div>
         {/* тут мапить */}
         {/* строка */}
-        {Array.isArray(lastEmployee.postgraduateProfessional) &&
-          lastEmployee.postgraduateProfessional.map((edu, index) => (
+        {Array.isArray(employeeItem.postgraduateProfessional) &&
+          employeeItem.postgraduateProfessional.map((edu, index) => (
             <div
               key={index}
               className="bg-gray-100 grid grid-cols-[30%_20%_12%_1fr] gap-y-0.5 mb-0.5"

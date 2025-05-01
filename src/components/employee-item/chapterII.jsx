@@ -3,14 +3,12 @@
 import { useSelector } from "react-redux";
 
 export const ChapterII = () => {
-  const { employeeArr } = useSelector((state) => state.employee);
-  //console.log("вывожу в тайтле", employeeArr);
+  //const { employeeArr } = useSelector((state) => state.employee); //👉 рендерю массив
+  const { selectedEmployee } = useSelector((state) => state.employee); //👉 рендерю отдельный елемент
 
-  const lastEmployee = employeeArr[employeeArr.length - 1] || {}; // чтобы не было ошибки если массив пуст
-
-  // useEffect(() => {
-  //   console.log("вывожу в стаж роботи: - ", lastEmployee);
-  // }, [lastEmployee]);
+  //console.log("вывожу в хедере", employeeArr);
+  //const employeeItem = employeeArr[employeeArr.length - 1] || {}; // чтобы не было ошибки если массив пуст
+  const employeeItem = selectedEmployee || {}; // пустой объект, если нет выбранного
   return (
     <>
       <div className="px-2 bg-[var(--main-bg-color)]  text-sm pt-2 ">
@@ -22,31 +20,31 @@ export const ChapterII = () => {
             <p className="flex text-nowrap items-end">
               Група обліку{" "}
               <span className="w-full bg-white block border-b border-b-gray-700 pl-4 text-base font-semibold text-left self-end">
-                {lastEmployee.accountingGroup}
+                {employeeItem.accountingGroup}
               </span>{" "}
             </p>
             <p className="flex text-nowrap items-end">
               Категорія обліку
               <span className="w-full bg-white block border-b border-b-gray-700 pl-4 text-base font-semibold text-left self-end">
-                {lastEmployee.categoriaGroup}
+                {employeeItem.categoriaGroup}
               </span>{" "}
             </p>
             <p className="flex text-nowrap items-end">
               Склад
               <span className="w-full bg-white block border-b border-b-gray-700 pl-4 text-base font-semibold text-left self-end">
-                {lastEmployee.composition}
+                {employeeItem.composition}
               </span>{" "}
             </p>
             <p className="flex text-nowrap items-end">
               Військове звання
               <span className="w-full bg-white block border-b border-b-gray-700 pl-4 text-base font-semibold text-left self-end">
-                {lastEmployee.militaryRank}
+                {employeeItem.militaryRank}
               </span>{" "}
             </p>
             <p className="flex text-nowrap items-end">
               Військово-облікова спеціальність N
               <span className="w-full bg-white block border-b border-b-gray-700 pl-4 text-base font-semibold text-left self-end">
-                {lastEmployee.militaryAccountingSpecialty}
+                {employeeItem.militaryAccountingSpecialty}
               </span>{" "}
             </p>
           </div>
@@ -54,7 +52,7 @@ export const ChapterII = () => {
             <p className="flex text-nowrap items-end">
               Придатність до військової служби
               <span className="w-full bg-white block border-b border-b-gray-700 pl-4 text-base font-semibold text-left self-end">
-                {lastEmployee.eligibilityMilitary}
+                {employeeItem.eligibilityMilitary}
               </span>{" "}
             </p>
             <div>
@@ -62,7 +60,7 @@ export const ChapterII = () => {
                 Назва райвійськкомату за місцем реєстрації
               </p>
               <span className="w-full bg-white block border-b border-b-gray-700 pl-4 text-base font-semibold text-left self-end">
-                {lastEmployee.nameOfDistrictMilitary}
+                {employeeItem.nameOfDistrictMilitary}
               </span>{" "}
             </div>
             <div>
@@ -70,13 +68,13 @@ export const ChapterII = () => {
                 Назва райвійськкомату за місцем фактичного проживання
               </p>
               <span className="w-full bg-white block border-b border-b-gray-700 pl-4 text-base font-semibold text-left self-end">
-                {lastEmployee.nameDistrictActual}
+                {employeeItem.nameDistrictActual}
               </span>{" "}
             </div>
             <p className="flex text-nowrap items-end">
               Перебування на спеціальному обліку
               <span className="w-full bg-white block border-b border-b-gray-700 pl-4 text-base font-semibold text-left self-end">
-                {lastEmployee.stayingSpecialRegistration}
+                {employeeItem.stayingSpecialRegistration}
               </span>{" "}
             </p>
           </div>

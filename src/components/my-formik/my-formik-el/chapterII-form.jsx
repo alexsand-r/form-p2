@@ -1,8 +1,8 @@
 // -- blockIIForm.jsx (ВІДОМОСТІ ПРО ВІЙСЬКОВИЙ ОБЛІК)
-
+import React from "react";
 import { Input } from "./input";
 
-export const ChapterIIForm = () => {
+export const ChapterIIForm = React.memo(() => {
   return (
     <>
       <h2 className="text-lg text-center mt-4">
@@ -54,4 +54,4 @@ export const ChapterIIForm = () => {
       </div>
     </>
   );
-};
+});
