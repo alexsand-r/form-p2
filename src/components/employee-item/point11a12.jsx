@@ -39,7 +39,7 @@ export const Point11a12 = () => {
         </span>{" "}
         <div className="w-30 flex items-end gap-x-3">
           <p className="text-nowrap">дата видачі</p>
-          <span className="w-full bg-white block border-b border-b-gray-700 pl-4 text-base font-semibold text-left self-end">
+          <span className="w-full bg-white block border-b border-b-gray-700 px-4  text-base font-semibold text-left self-end">
             {employeeItem.dateOfIssue}
           </span>{" "}
         </div>

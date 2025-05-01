@@ -12,4 +12,15 @@
 
 # 🔸 Шаг 2: Создай Redux thunk для загрузки
 
+// employeeSlice.js
+import { createSlice, createAsyncThunk } from "@reduxjs/toolkit";
+
+export const loadEmployeesFromJSON = createAsyncThunk(
+"employee/loadEmployeesFromJSON",
+async () => {
+const response = await fetch("/data.json");
+return await response.json(); // вернет массив сотрудников
+}
+);
+
 # 🔸 Шаг 3: Загрузи данные при старте приложения
