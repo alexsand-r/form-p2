@@ -18,7 +18,7 @@ export const Input = ({ id, label, name, placeholder }) => {
         id={id || name}
         name={name}
         placeholder={placeholder}
-        className="shadow-md text-lg bg-gray-50 border-2 border-gray-300 text-gray-900 rounded-lg focus:border-blue-500 w-full px-2.5 py-2"
+        className="shadow-md text-lg bg-gray-50 border-2 border-gray-300 text-gray-900 rounded-lg focus:border-blue-500 w-full px-1 py-0.5 min-w-[30px]"
         onChange={handleChange} // 👈 перехватываем onChange
       />
       <Error name={name}>

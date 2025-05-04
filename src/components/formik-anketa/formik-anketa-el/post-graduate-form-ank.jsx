@@ -6,25 +6,48 @@ import minus from "../../../../public/minus.svg";
 import { Input } from "../../input";
 import { MyAirDatepicker } from "../../my-air-datepicker";
 
-export const PostGraduateForm = React.memo(() => {
+export const PostGraduateFormAnk = React.memo(() => {
   return (
     <>
-      <h2 className="text-lg text-center mt-4">
-        Післядипломна професійна підготовка: <br /> навчання в аспірантурі
-        ад'юнктурі докторантурі (необхідне відмітити - X)
-      </h2>
-      <div className="flex justify-center">
-        <div className="grid grid-cols-3 gap-1 gap-x-4 mb-4 w-[300px]">
-          <Input label="аспірантурі:" name="graduateSchool" placeholder="..." />
-          <Input label="ад'юнктурі:" name="adjunct" placeholder="..." />
-
-          <Input
-            label="докторантурі"
-            name="doctoralStudies"
-            placeholder="..."
-          />
+      <div className="px-2 bg-[var(--main-bg-color)] text-sm">
+        <div className="flex gap-1 mb-4">
+          <p className="flex items-end">
+            5. Післядипломна професійна підготовка: навчання
+          </p>
+          <div className="flex gap-x-2 items-center">
+            <div className="flex items-center justify-center h-3 w-3">
+              <Input name="graduateSchool" placeholder="..." />
+            </div>
+            в аспірантурі
+            <div className="flex items-center justify-center h-3 w-3">
+              <Input name="adjunct" placeholder="..." />
+            </div>
+            ад'юнктурі
+            <div className="flex items-center justify-center h-3 w-3">
+              <Input name="doctoralStudies" placeholder="..." />
+            </div>
+            докторантурі (необхідне відмітити х)
+          </div>
         </div>
+
+        <div className="text-sm grid grid-cols-[30%_20%_12%_1fr] pt-2 mb-0.5">
+          <div className="font-bold text-center py-0.5 border-b border-r border-t border-l border-gray-700">
+            Назва освітнього, наукового закладу
+          </div>
+          <div className="font-bold text-center py-0.5 border-b border-r border-t border-gray-700">
+            Диплом, номер, дата видачі
+          </div>
+          <div className="font-bold text-center py-0.5 border-b border-r border-t border-gray-700">
+            Рік закінчення
+          </div>
+          <div className="font-bold text-center py-0.5 border-b border-r border-t border-gray-700">
+            Науковий ступінь, учене звання
+          </div>
+        </div>
+        {/* тут мапить */}
+        {/* строка */}
       </div>
+
       <div>
         {/* після дипломна підготовка таблица */}
 
@@ -34,16 +57,15 @@ export const PostGraduateForm = React.memo(() => {
               {form.values.postgraduateProfessional.map((_, index) => (
                 <div
                   key={index}
-                  className="grid grid-cols-[30%_20%_12%_35%] gap-1 gap-x-1 mb-2"
+                  className="px-2 grid grid-cols-[30%_20%_12%_1fr] mb-7"
                 >
                   <div className="relative">
                     <Input
-                      label="Назва освітнього, наукового  закладу:"
                       name={`postgraduateProfessional[${index}].name`}
                       placeholder="..."
                     />
                     {index > 0 && (
-                      <div className="absolute -bottom-[50%] right-2 group">
+                      <div className="absolute -bottom-[95%] right-2 group z-10">
                         <button
                           type="button"
                           onClick={() => remove(index)}
@@ -59,24 +81,21 @@ export const PostGraduateForm = React.memo(() => {
                   </div>
 
                   <Input
-                    label="Диплом, номер:"
                     name={`postgraduateProfessional[${index}].documentNumber`}
                     placeholder="..."
                   />
                   <MyAirDatepicker
-                    label="Рік закінчення"
                     name={`postgraduateProfessional[${index}].graduationYear`}
                     placeholder="..."
                     format="yyyy"
                   />
                   <Input
-                    label="Науковий ступінь, учене звання:"
                     name={`postgraduateProfessional[${index}].academicBegree`}
                     placeholder="..."
                   />
                 </div>
               ))}
-              <div className="relative group inline-block">
+              <div className="relative group inline-block ml-3">
                 <button
                   type="button"
                   onClick={() =>
@@ -99,7 +118,6 @@ export const PostGraduateForm = React.memo(() => {
           )}
         </FieldArray>
       </div>
-      <div className="w-full h-0.5 bg-[var(--main-color-line)] mt-[14px]"></div>
     </>
   );
 });

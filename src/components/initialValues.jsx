@@ -129,4 +129,5 @@ export const initialValues = {
   position: "", // посада
   lastNameMiddleName: "", //  Прізвище, ім'я по батькові
   dataDocument: "", // дата документу
+  //employeeСard: "", // П І Б  работника в конце формы
 };

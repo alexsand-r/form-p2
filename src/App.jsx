@@ -4,7 +4,8 @@ import { loadEmployeesFromJSON } from "./store/slices/employeeSlice";
 
 import { ListBody } from "./components/list/list-body"; // список сотрудников
 import { ItemCard } from "./components/employee-item/item-card";
-import { MyFormik } from "./components/my-formik/my-formik";
+//import { MyFormik } from "./components/my-formik/my-formik";
+import { FormikAnketa } from "./components/formik-anketa/formik-anketa";
 
 function App() {
   const [itemToEdit, setItemToEdit] = useState(null);
@@ -19,7 +20,8 @@ function App() {
   return (
     <>
       <ListBody setItemToEdit={setItemToEdit} />
-      <MyFormik itemToEdit={itemToEdit} setItemToEdit={setItemToEdit} />
+      {/* <MyFormik itemToEdit={itemToEdit} setItemToEdit={setItemToEdit} /> */}
+      <FormikAnketa itemToEdit={itemToEdit} setItemToEdit={setItemToEdit} />
       <ItemCard />
     </>
   );

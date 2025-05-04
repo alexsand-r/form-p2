@@ -30,21 +30,30 @@ export const formOfStudy = [
 export const customStyles = {
   control: (provided, state) => ({
     ...provided,
-    margin: "0", //
-    boxShadow: "0 4px 6px rgba(0, 0, 0, 0.1)", // shadow-md
-    backgroundColor: "#f9fafb", // bg-gray-50
+    minHeight: "35px", // ключевая строка: задаёт минимальную высоту
+    height: "35px", // принудительная высота
+    boxShadow: "0 4px 6px rgba(0, 0, 0, 0.1)",
+    backgroundColor: "#f9fafb",
     borderWidth: "2px",
-    borderColor: state.isFocused ? "#3b82f6" : "#d1d5db", // focus:border-blue-500 or border-gray-300
-    borderRadius: "0.5rem", // rounded-lg
-    //paddingLeft: "0.625rem", // px-2.5
-    paddingTop: "3px", // py-2
-    paddingBottom: "3px",
-    fontSize: "1.125rem", // text-lg
-    color: "#111827", // text-gray-900
+    borderColor: state.isFocused ? "#3b82f6" : "#d1d5db",
+    borderRadius: "0.5rem",
+    fontSize: "1.125rem",
+    color: "#111827",
     width: "100%",
+    paddingTop: 0,
+    paddingBottom: 0,
     "&:hover": {
       borderColor: "none",
     },
+  }),
+  valueContainer: (provided) => ({
+    ...provided,
+    height: "35px", // чтобы контент тоже соответствовал высоте
+    padding: "0 8px",
+  }),
+  indicatorsContainer: (provided) => ({
+    ...provided,
+    height: "35px",
   }),
   menu: (provided) => ({
     ...provided,
@@ -52,16 +61,16 @@ export const customStyles = {
   }),
   option: (provided, state) => ({
     ...provided,
-    backgroundColor: state.isFocused ? "#e5e7eb" : "#fff", // hover:bg-gray-200
+    backgroundColor: state.isFocused ? "#e5e7eb" : "#fff",
     color: "#111827",
     cursor: "pointer",
   }),
   singleValue: (provided) => ({
     ...provided,
-    color: "#111827", // text-gray-900
+    color: "#111827",
   }),
   placeholder: (provided) => ({
     ...provided,
-    color: "#6b7280", // text-gray-400
+    color: "#6b7280",
   }),
 };

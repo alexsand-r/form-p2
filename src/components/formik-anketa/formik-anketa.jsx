@@ -7,22 +7,22 @@ import { addEmployee, editEmployee } from "../../store/slices/employeeSlice";
 import { useEffect } from "react";
 import { initialValues } from "../initialValues";
 import { validationSchema } from "../validationSchema";
-import { GeneralInformationForm } from "./my-formik-el/general-information-form";
-import { TitleCompanyForm } from "./my-formik-el/title-company-form";
-import { Point67Form } from "./my-formik-el/point67-form";
-import { Point89Form } from "./my-formik-el/point89-form";
-import { Point10Form } from "./my-formik-el/point10-form";
-import { Point11a12Form } from "./my-formik-el/point11-a-12-form";
-import { ChapterIIForm } from "./my-formik-el/chapterII-form";
-import { ChapterIIIForm } from "./my-formik-el/chapterIII-form";
-import { ChapterIVForm } from "./my-formik-el/chapterIV-form";
-import { EducationalInstitutionsForm } from "./my-formik-el/educational-institutions-form";
-import { ProfessionForm } from "./my-formik-el/profession-form";
-import { PostGraduateForm } from "./my-formik-el/post-graduate-training-form";
-import { ChapterVForm } from "./my-formik-el/chapterV-form";
-import { EndForm } from "./my-formik-el/end-form";
+import { TitleCompanyFormAnk } from "./formik-anketa-el/title-company-form-ank";
+import { GeneralInformationFormAnk } from "./formik-anketa-el/general-information-ank";
+import { EducationalInstitutionsFormAnk } from "./formik-anketa-el/educational-institutions-form-ank";
+import { ProfessionFormAnk } from "./formik-anketa-el/profession-form-ank";
+import { PostGraduateFormAnk } from "./formik-anketa-el/post-graduate-form-ank";
+import { Point67FormAnk } from "./formik-anketa-el/point67-form-ank";
+import { Point89FormAnk } from "./formik-anketa-el/point89-form-ank";
+import { Point10FormAnk } from "./formik-anketa-el/point10-form-ank";
+import { Point11a12FormAnk } from "./formik-anketa-el/point11-a-12-form-ank";
+import { ChapterIIFormAnk } from "./formik-anketa-el/chapterII-form-ank";
+import { ChapterIIIFormAnk } from "./formik-anketa-el/chapterIII-form-ank";
+import { ChapterIVFormAnk } from "./formik-anketa-el/chapterIV-form-ank";
+import { ChapterVFormAnk } from "./formik-anketa-el/chapterV-form-ank";
+import { EndFormAnk } from "./formik-anketa-el/end-form-ank";
 
-export const MyFormik = ({ itemToEdit, setItemToEdit }) => {
+export const FormikAnketa = ({ itemToEdit, setItemToEdit }) => {
   const dispatch = useDispatch();
   const employeeArr = useSelector((state) => state.employee.employeeArr);
 
@@ -56,46 +56,46 @@ export const MyFormik = ({ itemToEdit, setItemToEdit }) => {
       >
         <Form className="px-2 bg-[var(--main-bg-color)] text-sm py-2 mb-4 shadow-md">
           {/* шапка формы: название предприятия и код едрпоу */}
-          <TitleCompanyForm />
+          <TitleCompanyFormAnk />
 
           {/* I ЗАГАЛЬНІ ВІДОМОСТІ  general information */}
-          <GeneralInformationForm />
+          <GeneralInformationFormAnk />
 
           {/* Навчальні заклади  educationalInstitutions (навчальні заклади)*/}
-          <EducationalInstitutionsForm />
+          <EducationalInstitutionsFormAnk />
 
           {/* Спеціальність / професія -- profession */}
-          <ProfessionForm />
+          <ProfessionFormAnk />
 
           {/* post-graduate training (після дипломна підготовка) */}
-          <PostGraduateForm />
+          <PostGraduateFormAnk />
 
           {/* 6. Останнє місце роботи 7. Стаж роботи */}
-          <Point67Form />
+          <Point67FormAnk />
 
           {/* 8. Дата звільнення  9. Причини звільнення  */}
-          <Point89Form />
+          <Point89FormAnk />
 
           {/* 10. Родинний стан */}
-          <Point10Form />
+          <Point10FormAnk />
 
           {/* 11 - 12. паспортни данни */}
-          <Point11a12Form />
+          <Point11a12FormAnk />
 
           {/* ІІ. ВІДОМОСТІ ПРО ВІЙСЬКОВИЙ ОБЛІК */}
-          <ChapterIIForm />
+          <ChapterIIFormAnk />
 
           {/* ІІІ. ПРОФЕСІЙНА ОСВІТА НА ВИРОБНИЦТВІ (ЗА РАХУНОК ПІДПРИЄМСТВА-РОБОТОДАВЦЯ) */}
-          <ChapterIIIForm />
+          <ChapterIIIFormAnk />
 
           {/* ІV. ПРОФЕСІЙНА ОСВІТА НА ВИРОБНИЦТВІ (ЗА РАХУНОК ПІДПРИЄМСТВА-РОБОТОДАВЦЯ) */}
-          <ChapterIVForm />
+          <ChapterIVFormAnk />
 
           {/* V. ВІДПУСТКИ */}
-          <ChapterVForm />
+          <ChapterVFormAnk />
 
           {/* Додаткові відомості */}
-          <EndForm />
+          <EndFormAnk />
 
           <Button itemToEdit={itemToEdit} />
         </Form>
