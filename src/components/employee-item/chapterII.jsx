@@ -11,7 +11,7 @@ export const ChapterII = () => {
   const employeeItem = selectedEmployee || {}; // пустой объект, если нет выбранного
   return (
     <>
-      <div className="px-2 bg-[var(--main-bg-color)]  text-sm pt-2 ">
+      <div className="px-2 text-sm pt-2 ">
         <h2 className="text-sm font-bold">
           ІІ. ВІДОМОСТІ ПРО ВІЙСЬКОВИЙ ОБЛІК
         </h2>

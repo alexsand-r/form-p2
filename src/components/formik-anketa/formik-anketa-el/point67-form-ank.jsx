@@ -7,7 +7,7 @@ import { MyAirDatepicker } from "../../my-air-datepicker";
 export const Point67FormAnk = React.memo(() => {
   return (
     <>
-      <div className="px-2 bg-[var(--main-bg-color)] text-sm pt-2">
+      <div className="px-2 text-sm pt-2">
         <div className="flex items-end mb-2 gap-x-3">
           <p> 6. Останнє місце роботи</p>
 

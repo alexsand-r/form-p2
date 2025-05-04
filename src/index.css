@@ -19,11 +19,12 @@ body {
 
 #root {
     width: 100%;
-    max-width: 824px;
+    /* max-width: 824px; */
+    max-width: 1000px;
     padding: 0 15px;
     /* background-color: aqua; */
     --main-color-line: #b9babc;
     --main-bg-color: #F3F4F6;
 }
 /* #F3F4F6 */
-
+ /* bg-[var(--main-bg-color)] */

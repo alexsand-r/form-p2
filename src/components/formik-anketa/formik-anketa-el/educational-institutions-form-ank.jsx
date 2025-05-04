@@ -10,7 +10,7 @@ export const EducationalInstitutionsFormAnk = React.memo(() => {
   return (
     <>
       {/* шапка таблицы Освита */}
-      <div className="px-2 bg-[var(--main-bg-color)]  text-sm grid grid-cols-[55%_30%_15%] pt-2 mb-0.5">
+      <div className="px-2 text-sm grid grid-cols-[55%_30%_15%] pt-2 mb-0.5">
         <div className="font-bold text-center py-0.5 border-b border-r border-t border-l border-gray-700">
           Назва освітнього закладу
         </div>
@@ -29,7 +29,7 @@ export const EducationalInstitutionsFormAnk = React.memo(() => {
             {form.values.educationalInstitutions.map((_, index) => (
               <div
                 key={index}
-                className="px-2 grid grid-cols-[55%_30%_15%] gap-x-0.5 mb-7"
+                className="px-2 grid grid-cols-[55%_30%_15%] gap-x-0.5 mb-7 "
               >
                 <div className="relative">
                   <Input

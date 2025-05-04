@@ -15,9 +15,9 @@ export const GeneralInformationFormAnk = React.memo(() => {
   return (
     <>
       {/* ------ */}
-      <div className="flex justify-between px-2 pt-4 bg-[var(--main-bg-color)]  ">
-        <div>
-          <div className="mb-0.5 mt-2 grid grid-cols-[100px_130px_130px_100px_130px]  text-sm text-center border border-gray-700">
+      <div className="flex justify-between px-2 pt-4">
+        <div className="w-[80%]">
+          <div className="mb-0.5 mt-2 grid grid-cols-[1fr_1fr_1fr_1fr_1fr]  text-sm text-center border border-gray-700">
             <div className="flex items-center justify-center px-1 border-r border-gray-700">
               Дата заповнення
             </div>
@@ -35,7 +35,7 @@ export const GeneralInformationFormAnk = React.memo(() => {
             </div>
           </div>
           {/* ---------- форма грид --------------- */}
-          <div className="mb-2 grid grid-cols-[100px_130px_130px_100px_130px] text-sm text-center gap-x-0.5">
+          <div className="mb-2 grid grid-cols-[1fr_1fr_1fr_1fr_1fr] text-sm text-center gap-x-0.5">
             {/* Дата заповнення */}
 
             <MyAirDatepicker
@@ -84,7 +84,7 @@ export const GeneralInformationFormAnk = React.memo(() => {
         </div>
       </div>
       <div className="px-2 bg-[var(--main-bg-color)]  text-sm">
-        <div className="flex items-end gap-x-2">
+        <div className="flex items-end gap-x-2 mb-1">
           <p className="text-nowrap">1. Прізвище</p>
           <div className="w-[200px]">
             <Input name="name" placeholder="..." />

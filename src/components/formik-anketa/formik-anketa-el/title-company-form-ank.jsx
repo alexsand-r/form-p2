@@ -4,7 +4,7 @@ import { Input } from "../../input";
 export const TitleCompanyFormAnk = React.memo(() => {
   return (
     <>
-      <div className="flex gap-4 justify-between items-center bg-[var(--main-bg-color)]  p-2">
+      <div className="flex gap-4 justify-between items-center p-2">
         <div className="w-[50%] pb-1">
           <div>
             <div className="text-center">

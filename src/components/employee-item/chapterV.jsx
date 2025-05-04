@@ -10,7 +10,7 @@ export const ChapterV = () => {
   const employeeItem = selectedEmployee || {}; // пустой объект, если нет выбранного
   return (
     <>
-      <div className="px-2 bg-[var(--main-bg-color)] text-sm pt-2 pb-5">
+      <div className="px-2 text-sm pt-2 pb-5">
         <p className="text-sm font-bold">V. ВІДПУСТКИ</p>
         <div className="text-sm grid grid-cols-[25%_1fr_1fr_1fr_1fr] mb-0.5">
           {/* header */}

@@ -10,7 +10,7 @@ export const End = () => {
   const employeeItem = selectedEmployee || {}; // пустой объект, если нет выбранного
   return (
     <>
-      <div className="px-2 bg-[var(--main-bg-color)] text-sm pt-2 pb-10">
+      <div className="px-2 text-sm pt-2 pb-10">
         {/* Додаткові відомості */}
         <div>
           <p className=" flex gap-2 items-end">Додаткові відомості</p>

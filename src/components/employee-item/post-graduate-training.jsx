@@ -12,7 +12,7 @@ export const PostGraduate = () => {
   const employeeItem = selectedEmployee || {}; // пустой объект, если нет выбранного
   return (
     <>
-      <div className="px-2 bg-[var(--main-bg-color)] text-sm">
+      <div className="px-2 text-sm">
         <div className="flex gap-1">
           <p className="flex items-end">
             5. Післядипломна професійна підготовка: навчання

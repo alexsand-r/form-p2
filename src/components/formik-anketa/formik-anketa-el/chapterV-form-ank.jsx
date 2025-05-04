@@ -9,7 +9,7 @@ import minus from "../../../../public/minus.svg";
 export const ChapterVFormAnk = React.memo(() => {
   return (
     <>
-      <div className="px-2 bg-[var(--main-bg-color)] text-sm pt-2">
+      <div className="px-2 text-sm pt-2">
         <p className="text-sm font-bold mb-2">V. ВІДПУСТКИ</p>
         <div className="text-sm grid grid-cols-[25%_30%_1fr_1fr_15%] mb-0.5">
           {/* header */}

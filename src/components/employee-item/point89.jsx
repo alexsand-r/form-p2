@@ -10,7 +10,7 @@ export const Point89 = () => {
   const employeeItem = selectedEmployee || {}; // пустой объект, если нет выбранного
   return (
     <>
-      <div className="px-2 bg-[var(--main-bg-color)] text-sm pt-2">
+      <div className="px-2 text-sm pt-2">
         <p className=" flex gap-2">
           8. Дата та причина звільнення (скорочення штатів; за власним бажанням,
           за прогул та інші порушення, невідповідність займаній посаді тощо)

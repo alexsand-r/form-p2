@@ -6,7 +6,7 @@ import { MyAirDatepicker } from "../../my-air-datepicker";
 export const EndFormAnk = React.memo(() => {
   return (
     <>
-      <div className="px-2 bg-[var(--main-bg-color)] text-sm pt-2 pb-5">
+      <div className="px-2 text-sm pt-2 pb-5">
         {/* Додаткові відомості */}
         <div className="mb-1">
           <p className=" flex gap-2 items-end">Додаткові відомості</p>

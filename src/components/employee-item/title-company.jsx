@@ -11,7 +11,7 @@ export const TitleCompany = () => {
 
   return (
     <>
-      <div className="flex gap-4 justify-between items-end bg-[var(--main-bg-color)]  p-2">
+      <div className="flex gap-4 justify-between items-end p-2">
         <div className="w-[50%] pb-1">
           <div>
             <p className="text-center w-full bg-white">

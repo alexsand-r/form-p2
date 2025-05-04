@@ -5,7 +5,7 @@ import { Input } from "../../input";
 export const ChapterIIFormAnk = React.memo(() => {
   return (
     <>
-      <div className="px-2 bg-[var(--main-bg-color)]  text-sm pt-2 mb-4">
+      <div className="px-2 text-sm pt-2 mb-4">
         <h2 className="text-sm font-bold mt-4 mb-2">
           ІІ. ВІДОМОСТІ ПРО ВІЙСЬКОВИЙ ОБЛІК
         </h2>

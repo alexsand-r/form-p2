@@ -14,7 +14,7 @@ import { SelectField2 } from "../../customStylesSelect/selectField2";
 export const ProfessionFormAnk = React.memo(() => {
   return (
     <>
-      <div className="px-2 bg-gray-100 text-sm grid grid-cols-[55%_30%_15%] pt-2 mb-0.5">
+      <div className="px-2 text-sm grid grid-cols-[55%_30%_15%] pt-2 mb-0.5">
         <div className="font-bold text-center py-0.5 border-b border-r border-t border-l border-gray-700">
           Спеціальність (професія) за дипломом (свідоцтвом)
         </div>

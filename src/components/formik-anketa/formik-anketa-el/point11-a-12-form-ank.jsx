@@ -6,7 +6,7 @@ import { MyAirDatepicker } from "../../my-air-datepicker";
 export const Point11a12FormAnk = React.memo(() => {
   return (
     <>
-      <div className="px-2 bg-[var(--main-bg-color)] text-sm pt-2">
+      <div className="px-2 text-sm pt-2">
         <p className=" flex gap-2 items-end mb-2">
           11. Місце фактичного проживання (область, місто, район, вулиця, N
           будинку, квартири, номер контактного телефону, поштовий індекс)

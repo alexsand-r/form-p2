@@ -9,7 +9,7 @@ import { MyAirDatepicker } from "../../my-air-datepicker";
 export const PostGraduateFormAnk = React.memo(() => {
   return (
     <>
-      <div className="px-2 bg-[var(--main-bg-color)] text-sm">
+      <div className="px-2 text-sm">
         <div className="flex gap-1 mb-4">
           <p className="flex items-end">
             5. Післядипломна професійна підготовка: навчання

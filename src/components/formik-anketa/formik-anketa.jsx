@@ -1,5 +1,6 @@
 // формик - тут чистый формик
-
+import { useNavigate } from "react-router-dom"; // ⬅️ импорт
+import { Link } from "react-router-dom";
 import { Formik, Form } from "formik";
 import { Button } from "../button";
 import { useDispatch, useSelector } from "react-redux";
@@ -25,6 +26,7 @@ import { EndFormAnk } from "./formik-anketa-el/end-form-ank";
 export const FormikAnketa = ({ itemToEdit, setItemToEdit }) => {
   const dispatch = useDispatch();
   const employeeArr = useSelector((state) => state.employee.employeeArr);
+  const navigate = useNavigate(); // ⬅️ хук навигации
 
   const addEmployeeInList = (values, { resetForm }) => {
     const formattedValues = { ...values };
@@ -39,6 +41,7 @@ export const FormikAnketa = ({ itemToEdit, setItemToEdit }) => {
 
     resetForm();
     setItemToEdit(null);
+    navigate("/"); // ⬅️ переход после сабмита и сброса формы
   };
 
   useEffect(() => {
@@ -47,14 +50,23 @@ export const FormikAnketa = ({ itemToEdit, setItemToEdit }) => {
 
   return (
     <>
-      <h1 className="text-sm font-bold mb-3">Форма Т-2 (формик)</h1>
+      <div>
+        <button
+          type="button"
+          className="bg-blue-400 p-0.5 text-white fixed top-[3%] right-[10%] z-30 cursor-pointer hover:bg-blue-500 transition-bg duration-300"
+        >
+          <Link to="/" className="block w-full h-full">
+            повернутися до списку
+          </Link>
+        </button>
+      </div>
       <Formik
         onSubmit={addEmployeeInList}
         initialValues={itemToEdit || initialValues}
         validationSchema={validationSchema}
         enableReinitialize={true} // ⬅️ ЭТО ДОБАВЬ что заполнить поля формы редактированным объектом
       >
-        <Form className="px-2 bg-[var(--main-bg-color)] text-sm py-2 mb-4 shadow-md">
+        <Form className="my-10 mx-auto w-[1000px] px-2 text-sm py-2 shadow-md bg-[var(--main-bg-color)] ">
           {/* шапка формы: название предприятия и код едрпоу */}
           <TitleCompanyFormAnk />
 

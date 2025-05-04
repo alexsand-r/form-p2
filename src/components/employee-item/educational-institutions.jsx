@@ -14,7 +14,7 @@ export const EducationalInstitutions = () => {
     <>
       <div>
         {/* шапка таблицы Освита */}
-        <div className="px-2 bg-[var(--main-bg-color)]  text-sm grid grid-cols-[55%_30%_15%] pt-2 mb-0.5">
+        <div className="px-2 text-sm grid grid-cols-[55%_30%_15%] pt-2 mb-0.5">
           <div className="font-bold text-center bg-white py-0.5 border-b border-r border-t border-l border-gray-700">
             Назва освітнього закладу
           </div>

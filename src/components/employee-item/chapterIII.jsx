@@ -10,7 +10,7 @@ export const ChapterIII = () => {
   const employeeItem = selectedEmployee || {}; // пустой объект, если нет выбранного
   return (
     <>
-      <div className="px-2 bg-[var(--main-bg-color)] text-sm pt-2">
+      <div className="px-2 text-sm pt-2">
         <p className="text-sm font-bold">
           ІІІ. ПРОФЕСІЙНА ОСВІТА НА ВИРОБНИЦТВІ (ЗА РАХУНОК
           ПІДПРИЄМСТВА-РОБОТОДАВЦЯ)

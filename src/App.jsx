@@ -1,14 +1,15 @@
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import { useEffect, useState } from "react";
 import { useDispatch } from "react-redux";
 import { loadEmployeesFromJSON } from "./store/slices/employeeSlice";
-
 import { ListBody } from "./components/list/list-body"; // список сотрудников
 import { ItemCard } from "./components/employee-item/item-card";
-//import { MyFormik } from "./components/my-formik/my-formik";
+
 import { FormikAnketa } from "./components/formik-anketa/formik-anketa";
 
 function App() {
-  const [itemToEdit, setItemToEdit] = useState(null);
+  const [itemToEdit, setItemToEdit] = useState(null); //состояние для редактируемого объекта
+
   const dispatch = useDispatch();
 
   // 🔻 Загружаем JSON один раз при старте
@@ -19,10 +20,24 @@ function App() {
 
   return (
     <>
-      <ListBody setItemToEdit={setItemToEdit} />
-      {/* <MyFormik itemToEdit={itemToEdit} setItemToEdit={setItemToEdit} /> */}
-      <FormikAnketa itemToEdit={itemToEdit} setItemToEdit={setItemToEdit} />
-      <ItemCard />
+      <Router>
+        <Routes>
+          <Route
+            path="/"
+            element={<ListBody setItemToEdit={setItemToEdit} />}
+          />
+          <Route
+            path="/form"
+            element={
+              <FormikAnketa
+                itemToEdit={itemToEdit}
+                setItemToEdit={setItemToEdit}
+              />
+            }
+          />
+          <Route path="/itemCard" element={<ItemCard />} />
+        </Routes>
+      </Router>
     </>
   );
 }

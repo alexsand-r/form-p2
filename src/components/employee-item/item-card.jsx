@@ -18,7 +18,7 @@ import { End } from "./end";
 export const ItemCard = () => {
   return (
     <>
-      <div className="shadow-md bg-gray-100">
+      <div className="shadow-md">
         {/* шапка формы: название предприятия и код едрпоу */}
         <TitleCompany />
 

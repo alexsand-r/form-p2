@@ -9,7 +9,7 @@ import minus from "../../../../public/minus.svg";
 export const Point10FormAnk = React.memo(() => {
   return (
     <>
-      <div className="px-2 bg-[var(--main-bg-color)] text-sm pt-2">
+      <div className="px-2 text-sm pt-2">
         <div className=" flex gap-2 items-end">
           <p> 10. Родинний стан</p>
 

@@ -11,7 +11,7 @@ export const Point67 = () => {
 
   return (
     <>
-      <div className="px-2 bg-[var(--main-bg-color)] text-sm pt-2">
+      <div className="px-2 text-sm pt-2">
         <p className="flex items-end">
           6. Останнє місце роботи
           <span className="w-[200px] bg-white block border-b border-b-gray-700 pl-4 text-base font-semibold">

@@ -7,7 +7,7 @@ import { MyAirDatepicker } from "../../my-air-datepicker";
 export const Point89FormAnk = React.memo(() => {
   return (
     <>
-      <div className="px-2 bg-[var(--main-bg-color)] text-sm pt-2">
+      <div className="px-2 text-sm pt-2">
         <div className="mb-2">
           <p>
             8. Дата та причина звільнення (скорочення штатів; за власним
