@@ -1,5 +1,5 @@
 //- tem-card.jsx
-
+import { Link } from "react-router-dom";
 import { EducationalInstitutions } from "./educational-institutions";
 import { GeneralInformation } from "./general-information";
 import { PostGraduate } from "./post-graduate-training";
@@ -18,7 +18,16 @@ import { End } from "./end";
 export const ItemCard = () => {
   return (
     <>
-      <div className="shadow-md">
+      {" "}
+      <button
+        type="button"
+        className="bg-blue-400 py-0.5 px-1 rounded-md text-white fixed top-[3%] right-[10%] z-30 cursor-pointer hover:bg-blue-500 transition-bg duration-300"
+      >
+        <Link to="/" className="block w-full h-full">
+          повернутися до списку
+        </Link>
+      </button>
+      <div className="shadow-md max-w-[824px] mx-auto">
         {/* шапка формы: название предприятия и код едрпоу */}
         <TitleCompany />
 

@@ -10,11 +10,11 @@ export const PostGraduateFormAnk = React.memo(() => {
   return (
     <>
       <div className="px-2 text-sm">
-        <div className="flex gap-1 mb-4">
+        <div className="flex gap-6 mb-4">
           <p className="flex items-end">
             5. Післядипломна професійна підготовка: навчання
           </p>
-          <div className="flex gap-x-2 items-center">
+          <div className="flex gap-x-5 items-center">
             <div className="flex items-center justify-center h-3 w-3">
               <Input name="graduateSchool" placeholder="..." />
             </div>

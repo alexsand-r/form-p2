@@ -7,7 +7,7 @@ export const Button = ({ itemToEdit }) => {
           type="submit"
           className="text-white bg-blue-500 px-2 py-1 rounded-md cursor-pointer hover:bg-blue-400 transition-bg duration-300 border-2 border-inherit hover:border-blue-700"
         >
-          {itemToEdit ? "Редагувати" : "Додати"}
+          {itemToEdit ? "Редагувати" : "Додати працівника"}
         </button>
       </div>
     </>

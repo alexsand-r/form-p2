@@ -30,7 +30,7 @@ export const EducationalInstitutions = () => {
           employeeItem.educationalInstitutions.map((edu, index) => (
             <div
               key={index}
-              className="px-2 bg-gray-100 grid grid-cols-[55%_30%_15%] gap-y-0.5 mb-0.5"
+              className="px-2 grid grid-cols-[55%_30%_15%] gap-y-0.5 mb-0.5"
             >
               <div className="pl-2 text-center bg-white py-0.5 border-b border-r border-t border-l border-gray-700">
                 {edu.name}

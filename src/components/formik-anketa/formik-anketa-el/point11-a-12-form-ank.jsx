@@ -26,7 +26,7 @@ export const Point11a12FormAnk = React.memo(() => {
             <Input name="passportSeries" placeholder="..." />
           </div>
           <p> N</p>
-          <div className="w-[70px] ">
+          <div className="w-[100px]">
             <Input name="passportNumber" placeholder="..." />
           </div>
         </div>
