@@ -16,36 +16,36 @@ export const GeneralInformation = () => {
     <>
       <div className="flex justify-between px-2 pt-4  ">
         <div>
-          <div className="mb-2 mt-2 grid grid-cols-[100px_130px_130px_100px_130px] grid-rows-[auto_30px] text-sm text-center border border-gray-700">
-            <div className="flex items-center justify-center px-1 border-b border-r border-gray-700">
+          <div className="mb-2 mt-2 grid grid-cols-[100px_130px_130px_100px_130px] grid-rows-[auto_30px] text-sm text-center border border-[var(--main-border-black)]">
+            <div className="flex items-center justify-center px-1 border-b border-r border-[var(--main-border-black)]">
               Дата заповнення
             </div>
-            <div className="flex items-center justify-center px-1 border-b border-r border-gray-700">
+            <div className="flex items-center justify-center px-1 border-b border-r border-[var(--main-border-black)]">
               Табельний номер
             </div>
-            <div className="flex items-center justify-center px-1 border-b border-r border-gray-700">
+            <div className="flex items-center justify-center px-1 border-b border-r border-[var(--main-border-black)]">
               Індивідуальний ідентифікаційний номер
             </div>
-            <div className="flex items-center justify-center px-1 border-b border-r border-gray-700">
+            <div className="flex items-center justify-center px-1 border-b border-r border-[var(--main-border-black)]">
               Стать (чоловіча, жіноча)
             </div>
-            <div className="flex items-center justify-center px-1 border-b border-gray-700">
+            <div className="flex items-center justify-center px-1 border-b border-[var(--main-border-black)]">
               Вид роботи (основна, за сумісництвом)
             </div>
             {/* Дата заповнення */}
-            <div className="flex items-center justify-center px-1 border-r border-gray-700 bg-white">
+            <div className="flex items-center justify-center px-1 border-r border-[var(--main-border-black)] bg-white">
               {employeeItem.dateOfCompletion}
             </div>
             {/* Табельний номер */}
-            <div className="flex items-center justify-center px-1 border-r border-gray-700 bg-white">
+            <div className="flex items-center justify-center px-1 border-r border-[var(--main-border-black)] bg-white">
               {employeeItem.personnelNumber}
             </div>
             {/* Індивідуальний ідентифікаційний номер */}
-            <div className="flex items-center justify-center px-1 border-r border-gray-700 bg-white">
+            <div className="flex items-center justify-center px-1 border-r border-[var(--main-border-black)] bg-white">
               {employeeItem.individualIdentificationNumber}
             </div>
             {/* Стать (чоловіча, жіноча) */}
-            <div className="flex items-center justify-center px-1 border-r border-gray-700 bg-white">
+            <div className="flex items-center justify-center px-1 border-r border-[var(--main-border-black)] bg-white">
               {employeeItem.sex}
             </div>
             {/* Вид роботи (основна, за сумісництвом) */}
@@ -61,12 +61,8 @@ export const GeneralInformation = () => {
             <p className="text-sm font-bold">І. ЗАГАЛЬНІ ВІДОМОСТІ</p>
           </div>
         </div>
-        {/* <div className=" w-[115px] h-[143px] border border-gray-700 relative mr-4">
-          <p className="text-[10px] absolute top-1/2 left-1/2 whitespace-nowrap transform -translate-x-1/2 -translate-y-1/2">
-            місце для фотокартки
-          </p>
-        </div> */}
-        <div className=" w-[115px] h-[143px] border border-gray-700 mr-4">
+
+        <div className=" w-[115px] h-[143px] border border-[var(--main-border-black)] mr-4">
           <div className="relative pb-[124%]">
             <img
               src={
@@ -85,25 +81,25 @@ export const GeneralInformation = () => {
       <div className="px-2 text-sm">
         <p className="flex items-end">
           1. Прізвище{" "}
-          <span className="w-[200px] bg-white block border-b border-b-gray-700 pl-4 text-base font-semibold uppercase">
+          <span className="w-[200px] bg-white block border-b border-[var(--main-border-black)] pl-4 text-base font-semibold uppercase">
             {employeeItem.name}
           </span>
           Ім'я{" "}
-          <span className="w-[200px] bg-white block border-b border-b-gray-700 pl-4 text-base font-semibold uppercase">
+          <span className="w-[200px] bg-white block border-b border-[var(--main-border-black)] pl-4 text-base font-semibold uppercase">
             {employeeItem.firstName}
           </span>{" "}
           По батькові{" "}
-          <span className="w-[200px] bg-white block border-b border-b-gray-700 pl-4 text-base font-semibold uppercase">
+          <span className="w-[200px] bg-white block border-b border-[var(--main-border-black)] pl-4 text-base font-semibold uppercase">
             {employeeItem.lastName}
           </span>
         </p>
         <p className="flex items-end">
           2. Дата народження{" "}
-          <span className="w-[170px] bg-white block border-b border-b-gray-700 pl-4 text-base font-semibold">
+          <span className="w-[170px] bg-white block border-b border-[var(--main-border-black)] pl-4 text-base font-semibold">
             {employeeItem.dateOfBirth}
           </span>{" "}
           3. Громадянство{" "}
-          <span className="w-[250px] bg-white block border-b border-b-gray-700 pl-4 text-base font-semibold uppercase">
+          <span className="w-[250px] bg-white block border-b border-[var(--main-border-black)] pl-4 text-base font-semibold uppercase">
             {employeeItem.citizenship}
           </span>
         </p>
@@ -111,7 +107,7 @@ export const GeneralInformation = () => {
           4. Освіта (базова загальна середня, повна загальна середня,
           професійно-технічна, неповна вища, базова вища, повна вища){" "}
         </p>
-        <p className="w-full text-center bg-white block border-b border-b-gray-700 pl-4 text-base font-semibold">
+        <p className="w-full text-center bg-white block border-b border-[var(--main-border-black)] pl-4 text-base font-semibold">
           {employeeItem.education}
         </p>
       </div>

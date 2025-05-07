@@ -49,8 +49,8 @@
     "serviceDays": "10",
     "monthsOfService": "3",
     "yearsOfService": "5",
-    "releaseDate": "",
-    "reasonForDismissal": "",
+    "releaseDate": "01.02.2002",
+    "reasonForDismissal": "38 за власным бажанням",
     "informationAboutReceivingPension": "Ні",
     "maritalStatus": "Одружений",
     "familyComposition": [
@@ -89,8 +89,8 @@
     "assignmentAndTransfer": [
       {
         "dateOfstudy": "01.01.2024",
-        "nameStructuralUnit": "Проектний відділ",
-        "professionName": "Інженер-проектувальник",
+        "nameStructuralUnit": "Проектний відділ Першого управління",
+        "professionName": "Інженер - проектувальник",
         "codeForCP": "2141",
         "salary": "15000",
         "groundOrder": "Наказ №12",

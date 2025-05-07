@@ -12,7 +12,7 @@ export const ChapterIV = () => {
     <>
       <div className="px-2 text-sm pt-2">
         <p className="text-sm font-bold">IV. ПРИЗНАЧЕННЯ І ПЕРЕВЕДЕННЯ</p>
-        <div className="text-sm grid grid-cols-[10%_1fr_10%_10%_10%_17%_13%] mb-0.5">
+        <div className="text-sm grid grid-cols-[10%_1fr_15%_10%_10%_17%_13%] mb-0.5">
           {/* header */}
           <div className="font-bold text-center bg-white p-0.5 border-b border-r border-t border-l border-gray-700">
             Дата
@@ -41,28 +41,28 @@ export const ChapterIV = () => {
           employeeItem.assignmentAndTransfer.map((el, index) => (
             <div
               key={index}
-              className=" bg-gray-100 grid grid-cols-[10%_1fr_10%_10%_10%_17%_13%] gap-y-0.5 mb-0.5"
+              className=" bg-gray-100 grid grid-cols-[10%_1fr_15%_10%_10%_17%_13%] gap-y-0.5 mb-0.5"
             >
-              <div className="pl-2 text-center bg-white py-0.5 border-b border-r border-t border-l border-gray-700">
+              <div className="px-1 text-center bg-white py-0.5 border-b border-r border-t border-l border-gray-700">
                 {el.dateOfstudy}
               </div>
-              <div className="pl-2 text-center bg-white py-0.5 border-b border-r border-t border-gray-700">
+              <div className="px-1 text-center bg-white py-0.5 border-b border-r border-t border-gray-700">
                 {el.nameStructuralUnit}
               </div>
-              <div className="pl-2 text-center bg-white py-0.5 border-b border-r border-t border-gray-700">
+              <div className="px-1 text-center bg-white py-0.5 border-b border-r border-t border-gray-700">
                 {el.professionName}
               </div>
 
-              <div className="pl-2 text-center bg-white py-0.5 border-b border-r border-t border-gray-700">
+              <div className="px-1 text-center bg-white py-0.5 border-b border-r border-t border-gray-700">
                 {el.codeForCP}
               </div>
-              <div className="pl-2 text-center bg-white py-0.5 border-b border-r border-t border-gray-700">
+              <div className="px-1 text-center bg-white py-0.5 border-b border-r border-t border-gray-700">
                 {el.salary}
               </div>
-              <div className="pl-2 text-center bg-white py-0.5 border-b border-r border-t border-gray-700">
+              <div className="px-1 text-center bg-white py-0.5 border-b border-r border-t border-gray-700">
                 {el.groundOrder}
               </div>
-              <div className="pl-2 text-center bg-white py-0.5 border-b border-r border-t border-gray-700">
+              <div className="px-1 text-center bg-white py-0.5 border-b border-r border-t border-gray-700">
                 {el.employeeSignatur}
               </div>
             </div>

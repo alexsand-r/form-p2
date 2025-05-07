@@ -2,6 +2,7 @@
 export const initialValues = {
   nameOfEnterprise: "", // название предприятия
   edrpoy: "", // код ЕДРПОУ
+  //-- general-information
   dateOfCompletion: "", // дата заполнения
   personnelNumber: "", // табельный номер
   individualIdentificationNumber: "", // Індивідуальний ідентифікаційний номер
@@ -14,6 +15,7 @@ export const initialValues = {
   dateOfBirth: "", // дата рождения
   education: "", // освита
   citizenship: "", // громадянство
+  //-
   // для добавления учебного заведения
   educationalInstitutions: [
     {

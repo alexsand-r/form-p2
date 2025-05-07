@@ -7,7 +7,7 @@ export const loadEmployeesFromJSON = createAsyncThunk(
   async () => {
     const response = await fetch("/data.json");
     const data = await response.json(); // массив сотрудников
-    console.log("читаю массив из джесона", data);
+    //console.log("читаю массив из джесона", data);
 
     // сортировка по алфавиту по свойству name
     const sortedData = data.sort((a, b) => a.name.localeCompare(b.name));
@@ -33,11 +33,11 @@ const employeeSlice = createSlice({
 
         ...action.payload, //! 🔁 сюда войдут ВСЕ поля, которые ты сейчас вручную перечислял 🧠 🧠 🧠
       });
-      console.log("список работников:", state.employeeArr); // ✅ массив после добавления
+      //console.log("список работников:", state.employeeArr); // ✅ массив после добавления
     },
     selectEmployeeForView: (state, action) => {
       state.selectedEmployee = action.payload;
-      console.log("рендер для предпросмотра", action.payload);
+      //console.log("рендер для предпросмотра", action.payload);
     },
     removeEmployee: (state, action) => {
       state.employeeArr = state.employeeArr.filter(

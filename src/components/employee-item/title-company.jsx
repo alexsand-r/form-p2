@@ -17,7 +17,7 @@ export const TitleCompany = () => {
             <p className="text-center w-full bg-white">
               {employeeItem.nameOfEnterprise}
             </p>
-            <p className="block w-full h-[1px] bg-gray-900"></p>
+            <p className="block w-full border-b border-[var(--main-border-black)]"></p>
             <p className="text-[10px] text-center">
               Найменування підприємства (установи, організації)
             </p>
@@ -27,7 +27,7 @@ export const TitleCompany = () => {
             <div>
               <p className="whitespace-nowrap text-sm">Код ЄДРПОУ</p>
             </div>
-            <p className="text-center border-b border-gray-900 w-full bg-white">
+            <p className="text-center border-b border-[var(--main-border-black)] w-full bg-white">
               {employeeItem.edrpoy}
             </p>
           </div>
