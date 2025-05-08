@@ -3,10 +3,16 @@ import { Text, View, StyleSheet, Image } from "@react-pdf/renderer";
 
 const styles = StyleSheet.create({
   wrapper: {
-    flexDirection: "row",
+    flexDirection: "row", // если ты хочешь поведение как justify-between по горизонтали
     justifyContent: "space-between",
-    paddingHorizontal: 8,
-    paddingTop: 16,
+    paddingHorizontal: 8, // это эквивалент px-2
+    paddingTop: 16, // это эквивалент pt-4
+  },
+  imageWrapper: {
+    position: "relative",
+    width: 105, // 115 px
+    height: 133, // 143 px
+    marginTop: -50, // Поднимаем вверх на 50 пикселей
   },
   leftBlock: {
     flex: 1,
@@ -51,10 +57,14 @@ const styles = StyleSheet.create({
     justifyContent: "center",
     alignItems: "center",
   },
-  img: {
-    objectFit: "cover",
+  image: {
+    position: "absolute",
+    top: "50%",
+    left: "50%",
     width: "100%",
     height: "100%",
+    objectFit: "cover",
+    transform: "translate(-50%, -50%)",
   },
   content: {
     paddingHorizontal: 8,
@@ -120,15 +130,9 @@ export const GeneralInformationPDF = ({ data }) => {
           </View>
         </View>
 
-        {/* <View style={styles.photoBlock}>
-          <Image
-            src={data.photoOfWorker || userPhoto}
-            style={[
-              styles.img,
-              !data.photoOfWorker && { width: "50%", height: "50%" },
-            ]}
-          />
-        </View> */}
+        <View style={styles.imageWrapper}>
+          <Image src={data.photoOfWorker} style={styles.image} />
+        </View>
       </View>
 
       <View style={styles.content}>
