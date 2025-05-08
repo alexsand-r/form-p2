@@ -1,0 +1,271 @@
+[
+  {
+    "id": "emp-1a2b3c4d",
+    "nameOfEnterprise": "ТОВ 'Усе буде добре'",
+    "edrpoy": "12345678",
+    "dateOfCompletion": "01.03.2025",
+    "personnelNumber": "001",
+    "individualIdentificationNumber": "3501234567",
+    "sex": "Чоловіча",
+    "typeOfWork": "Основна",
+    "photoOfWorker": "/user/screenshot_2.png",
+    "name": "Іваненко",
+    "firstName": "Микола",
+    "lastName": "Петрович",
+    "dateOfBirth": "12.05.1985",
+    "education": "Вища",
+    "citizenship": "Україна",
+    "educationalInstitutions": [
+      {
+        "name": "Київський національний університет",
+        "documentNumber": "AB123456",
+        "graduationYear": "2008"
+      }
+    ],
+    "profession": [
+      {
+        "profes": "Інженер",
+        "qualification": "Магістр",
+        "formOfStudy": "Денна"
+      }
+    ],
+    "graduateSchool": "Так",
+    "adjunct": "",
+    "doctoralStudies": "",
+    "postgraduateProfessional": [
+      {
+        "name": "Курс підвищення кваліфікації",
+        "documentNumber": "PK-2020-001",
+        "graduationYear": "2020",
+        "academicBegree": "Кандидат техн. наук"
+      }
+    ],
+    "lastPlaceOfWork": "ТОВ 'БудСервіс'",
+    "positionProfession": "Головний інженер",
+    "workExperience": "01.01.2025",
+    "genaralDay": "15",
+    "genaralMounth": "6",
+    "genaralYears": "12",
+    "serviceDays": "10",
+    "monthsOfService": "3",
+    "yearsOfService": "5",
+    "releaseDate": "01.02.2002",
+    "reasonForDismissal": "38 за власным бажанням",
+    "informationAboutReceivingPension": "Ні",
+    "maritalStatus": "Одружений",
+    "familyComposition": [
+      {
+        "degreeOfFamilyRelationship": "Дружина",
+        "fullName": "Іваненко Марина",
+        "yearOfBirth": "1986"
+      }
+    ],
+    "actualPlaceOfResidence": "м. Київ, вул. Перемоги, 15",
+    "placeOfResidenceRegistration": "м. Київ, вул. Перемоги, 15",
+    "passportSeries": "КА",
+    "passportNumber": "123456",
+    "byWhomIssued": "Солом’янський РВ УМВС",
+    "dateOfIssue": "12.08.2005",
+    "accountingGroup": "Основна",
+    "eligibilityMilitary": "Придатний",
+    "categoriaGroup": "Офіцер",
+    "nameOfDistrictMilitary": "Солом’янський військкомат",
+    "composition": "Резерв",
+    "nameDistrictActual": "Солом’янський військкомат",
+    "militaryRank": "Старший лейтенант",
+    "stayingSpecialRegistration": "Ні",
+    "militaryAccountingSpecialty": "112",
+    "onTheJob": [
+      {
+        "dateOfstudy": "01.11.2023",
+        "nameStructuralUnit": "Технічний відділ",
+        "trainingPeriodWith": "01.01.2023",
+        "trainingPeriod": "01.11.2023",
+        "typeOfTraining": "Внутрішнє",
+        "formOfStudy": "Очна",
+        "documentCertifyingProfessional": "Сертифікат ТОВ 'ЕнергоПром'"
+      }
+    ],
+    "assignmentAndTransfer": [
+      {
+        "dateOfstudy": "01.01.2024",
+        "nameStructuralUnit": "Проектний відділ Першого управління",
+        "professionName": "Інженер - проектувальник",
+        "codeForCP": "2141",
+        "salary": "15000",
+        "groundOrder": "Наказ №12",
+        "employeeSignatur": "Іваненко І.І."
+      }
+    ],
+    "vacations": [
+      {
+        "typeOfVacation": "Щорічна основна",
+        "forWhatPeriodStart": "01.01.2024",
+        "forWhatPeriodEnd": "31.12.2024",
+        "vacationStartDate": "01.07.2024",
+        "vacationEndDate": "14.07.2024",
+        "groundOrder": "Наказ №34"
+      }
+    ],
+    "additionalInformation": "Працює дистанційно",
+    "releaseDateDay": "",
+    "reasonForDismissalDay": "",
+    "position": "Інженер",
+    "lastNameMiddleName": "Дудукайло О.О.",
+    "dataDocument": "01.03.2025"
+  },
+  {
+    "id": "emp-5e6f7g8h",
+    "nameOfEnterprise": "ТОВ 'Нові Технології'",
+    "edrpoy": "87654321",
+    "dateOfCompletion": "15.02.2024",
+    "personnelNumber": "002",
+    "individualIdentificationNumber": "3109876543",
+    "sex": "Жіноча",
+    "typeOfWork": "Основна",
+    "photoOfWorker": "/user/Screenshot_8.png",
+    "name": "Петренко",
+    "firstName": "Олена",
+    "lastName": "Сергіївна",
+    "dateOfBirth": "25.09.1990",
+    "education": "Вища",
+    "citizenship": "Україна",
+    "educationalInstitutions": [
+      {
+        "name": "Харківський політехнічний інститут",
+        "documentNumber": "CD654321",
+        "graduationYear": "2012"
+      }
+    ],
+    "profession": [
+      {
+        "profes": "Програміст",
+        "qualification": "Бакалавр",
+        "formOfStudy": "Заочна"
+      }
+    ],
+    "graduateSchool": "Ні",
+    "adjunct": "",
+    "doctoralStudies": "",
+    "postgraduateProfessional": [],
+    "lastPlaceOfWork": "ТОВ 'АйТі Рішення'",
+    "positionProfession": "Програміст",
+    "workExperience": "10.10.2023",
+    "genaralDay": "7",
+    "genaralMounth": "5",
+    "genaralYears": "10",
+    "serviceDays": "4",
+    "monthsOfService": "2",
+    "yearsOfService": "3",
+    "releaseDate": "",
+    "reasonForDismissal": "",
+    "informationAboutReceivingPension": "Ні",
+    "maritalStatus": "Не одружена",
+    "familyComposition": [],
+    "actualPlaceOfResidence": "м. Харків, пр-т Науки, 20",
+    "placeOfResidenceRegistration": "м. Харків, пр-т Науки, 20",
+    "passportSeries": "ХК",
+    "passportNumber": "654321",
+    "byWhomIssued": "Шевченківський РВ УМВС",
+    "dateOfIssue": "15.05.2008",
+    "accountingGroup": "Основна",
+    "eligibilityMilitary": "",
+    "categoriaGroup": "",
+    "nameOfDistrictMilitary": "",
+    "composition": "",
+    "nameDistrictActual": "",
+    "militaryRank": "",
+    "stayingSpecialRegistration": "",
+    "militaryAccountingSpecialty": "",
+    "onTheJob": [],
+    "assignmentAndTransfer": [],
+    "vacations": [],
+    "additionalInformation": "",
+    "releaseDateDay": "",
+    "reasonForDismissalDay": "",
+    "position": "Програміст",
+     "lastNameMiddleName": "Дудукайло О.О.",
+    "dataDocument": "15.02.2024"
+  },
+  {
+    "id": "emp-9i0j1k2l",
+    "nameOfEnterprise": "ПАТ 'Будівельник'",
+    "edrpoy": "56781234",
+    "dateOfCompletion": "10.04.2023",
+    "personnelNumber": "003",
+    "individualIdentificationNumber": "3214567890",
+    "sex": "Чоловіча",
+    "typeOfWork": "Сумісництво",
+    "photoOfWorker": "/user/Screenshot_7.png",
+    "name": "Сидоренко",
+    "firstName": "Петро",
+    "lastName": "Олексійович",
+    "dateOfBirth": "30.01.1975",
+    "education": "Середня спеціальна",
+    "citizenship": "Україна",
+    "educationalInstitutions": [
+      {
+        "name": "Будівельний технікум",
+        "documentNumber": "EF789012",
+        "graduationYear": "1995"
+      }
+    ],
+    "profession": [
+      {
+        "profes": "Маляр",
+        "qualification": "Технік",
+        "formOfStudy": "Вечірня"
+      }
+    ],
+    "graduateSchool": "Ні",
+    "adjunct": "",
+    "doctoralStudies": "",
+    "postgraduateProfessional": [],
+    "lastPlaceOfWork": "ПП 'РемБуд'",
+    "positionProfession": "Маляр-штукатур",
+    "workExperience": "01.03.2023",
+    "genaralDay": "20",
+    "genaralMounth": "8",
+    "genaralYears": "25",
+    "serviceDays": "15",
+    "monthsOfService": "5",
+    "yearsOfService": "10",
+    "releaseDate": "",
+    "reasonForDismissal": "",
+    "informationAboutReceivingPension": "Так",
+    "maritalStatus": "Розлучений",
+    "familyComposition": [
+      {
+        "degreeOfFamilyRelationship": "Син",
+        "fullName": "Сидоренко Максим",
+        "yearOfBirth": "2005"
+      }
+    ],
+    "actualPlaceOfResidence": "м. Львів, вул. Франка, 10",
+    "placeOfResidenceRegistration": "м. Львів, вул. Франка, 10",
+    "passportSeries": "ЛВ",
+    "passportNumber": "789012",
+    "byWhomIssued": "Галицький РВ УМВС",
+    "dateOfIssue": "20.09.1995",
+    "accountingGroup": "",
+    "eligibilityMilitary": "Придатний",
+    "categoriaGroup": "",
+    "nameOfDistrictMilitary": "",
+    "composition": "",
+    "nameDistrictActual": "",
+    "militaryRank": "",
+    "stayingSpecialRegistration": "",
+    "militaryAccountingSpecialty": "",
+    "onTheJob": [],
+    "assignmentAndTransfer": [],
+    "vacations": [],
+    "additionalInformation": "",
+    "releaseDateDay": "",
+    "reasonForDismissalDay": "",
+    "position": "Маляр",
+     "lastNameMiddleName": "Дудукайло О.О.",
+    "dataDocument": "10.04.2023"
+  }
+]
+
+
