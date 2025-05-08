@@ -40,8 +40,8 @@ export const FormikAnketa = ({ itemToEdit, setItemToEdit }) => {
     }
 
     resetForm();
-    setItemToEdit(null);
-    navigate("/"); // ⬅️ переход после сабмита и сброса формы
+    //setItemToEdit(null);
+   // navigate("/"); // ⬅️ переход после сабмита и сброса формы
   };
 
   useEffect(() => {
@@ -52,12 +52,16 @@ export const FormikAnketa = ({ itemToEdit, setItemToEdit }) => {
     <>
       <div>
         <button
+             onClick={() => {
+            setItemToEdit(null); // ⬅️ сбрасываем редактируемый объект
+            navigate("/"); // ⬅️ переходим назад
+          }}
           type="button"
           className="bg-blue-400 py-0.5 px-1 rounded-md text-white fixed top-[3%] right-[10%] z-30 cursor-pointer hover:bg-blue-500 transition-bg duration-300"
         >
-          <Link to="/" className="block w-full h-full">
+         
             повернутися до списку
-          </Link>
+          
         </button>
       </div>
       <Formik
