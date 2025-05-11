@@ -2,53 +2,60 @@
 <html lang="uk">
   <head>
     <meta charset="UTF-8" />
-    <title>Застосунок перезавантажено</title>
+    <title>Сторінка не знайдена</title>
     <style>
-      body {
-        font-family: sans-serif;
-        text-align: center;
-        padding: 50px;
-        background-color: #f3f4f6;
-        color: #1f2937;
+      * {
+        box-sizing: border-box;
       }
-      .container {
-        max-width: 600px;
-        margin: auto;
-        background: white;
-        padding: 2rem;
-        border-radius: 1rem;
-        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+      body {
+        margin: 0;
+        padding: 0;
+        font-family: "Segoe UI", sans-serif;
+        background-color: #f8fafc;
+        color: #334155;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        height: 100vh;
+        text-align: center;
+      }
+      img {
+        max-width: 300px;
+        height: auto;
+        margin-bottom: 20px;
+      }
+      h1 {
+        font-size: 2.5rem;
+        margin: 10px 0;
+      }
+      p {
+        max-width: 500px;
+        font-size: 1.1rem;
+        margin: 0 auto 20px;
       }
       a {
         display: inline-block;
-        margin-top: 1rem;
-        padding: 0.75rem 1.5rem;
-        background-color: #3b82f6;
+        padding: 10px 20px;
+        background-color: #2563eb;
         color: white;
         text-decoration: none;
-        border-radius: 0.5rem;
+        border-radius: 8px;
         font-weight: bold;
+        transition: background-color 0.3s ease;
       }
       a:hover {
-        background-color: #2563eb;
+        background-color: #1d4ed8;
       }
     </style>
   </head>
   <body>
-    <div class="container">
-      <h1>🔁 Сторінку не знайдено</h1>
-      <p>
-        Ви, ймовірно, перезавантажили сторінку в підрозділі застосунку.<br />
-        GitHub Pages не підтримує прямі переходи в маршрутах React Router.
-      </p>
-      <p>
-        Не хвилюйтеся – це **не помилка розробника**, а особливість хостингу.
-      </p>
-      <p>
-        Щоб продовжити користування застосунком, натисніть кнопку нижче, щоб
-        повернутися на головну сторінку.
-      </p>
-      <a href="https://alexsand-r.github.io/form-p2/">🏠 Перейти на головну</a>
-    </div>
+    <img src="no-data-01.svg" alt="Зображення: дані не знайдені" />
+    <h1>Сторінку не знайдено (404)</h1>
+    <p>
+      Ймовірно, ви оновили сторінку або перейшли за глибоким маршрутом, який
+      GitHub Pages не підтримує.
+    </p>
+    <a href="/form-p2/">Повернутися на головну</a>
   </body>
 </html>
