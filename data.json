@@ -110,7 +110,7 @@
     "additionalInformation": "Працює дистанційно",
     "releaseDateDay": "",
     "reasonForDismissalDay": "",
-    "position": "Інженер",
+    "position": "Інспектор",
     "lastNameMiddleName": "Кадровік О.О.",
     "dataDocument": "01.03.2025"
   },
@@ -183,7 +183,7 @@
     "additionalInformation": "",
     "releaseDateDay": "",
     "reasonForDismissalDay": "",
-    "position": "Програміст",
+    "position": "Інспектор",
      "lastNameMiddleName": "Кадровік О.О.",
     "dataDocument": "15.02.2024"
   },
@@ -255,14 +255,14 @@
     "nameDistrictActual": "",
     "militaryRank": "",
     "stayingSpecialRegistration": "",
-    "militaryAccountingSpecialty": "",
+    "militaryAccountingSpecialty": "",  
     "onTheJob": [],
     "assignmentAndTransfer": [],
     "vacations": [],
     "additionalInformation": "",
     "releaseDateDay": "",
     "reasonForDismissalDay": "",
-    "position": "Маляр",
+    "position": "інспектор",
      "lastNameMiddleName": "Кадровік О.О.",
     "dataDocument": "10.04.2023"
   }
